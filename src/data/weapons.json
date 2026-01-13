@@ -1,0 +1,23 @@
+[
+    {
+        "id": "ak47",
+        "name": {
+            "en": "Kalashnikov AK-47 7.62x39 assault rifle",
+            "zh": "卡拉什尼科夫 AK-47 7.62x39 突击步枪"
+        },
+        "type": "Assault Rifle",
+        "caliber": "7.62x39mm",
+        "stats": {
+            "ergonomics": 46,
+            "accuracy": 20,
+            "sightingRange": 100,
+            "verticalRecoil": 98,
+            "horizontalRecoil": 275,
+            "fireRate": 600
+        },
+        "description": {
+            "en": "The classic Soviet assault rifle. Reliable, powerful, but hard to control without modifications.",
+            "zh": "经典的苏联突击步枪。可靠、威力巨大，但未改装时后座力难以控制。"
+        }
+    }
+]

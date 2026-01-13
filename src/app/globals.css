@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  /* Default to Dark Mode (Tactical Theme) */
+  --background: #121212;
+  /* Deep Charcoal */
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Duckov Brand Overrides */
+  --color-yellow-500: #FF9F1A;
+  /* Industrial Amber */
+  --color-yellow-400: #FFB347;
+  /* Highlight Amber */
+  --color-yellow-500-20: rgba(255, 159, 26, 0.2);
+}
+
+/* @media (prefers-color-scheme: dark) { ... } Removed to enforce consistency */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  /* @apply bg-neutral-950; <-- Removed to allow new theme background */
+}
+
+/* --- VISUAL OVERHAUL PRO UTILITIES --- */
+
+/* 1. Global Noise Texture */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 2. Tactical Grid Background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* 3. Cinematic Vignette */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 40;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* 4. Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-[#1E211E]/80 backdrop-blur-md border border-white/5 shadow-xl;
+  /* Tactical Olive-Gray Surface */
+}
+
+.glass-panel-hover {
+  transition: all 300ms;
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(255, 159, 26, 0.3);
+  /* Amber Border */
+  background-color: rgba(30, 33, 30, 0.9);
+  /* Opaque Tactical Green */
+  box-shadow: 0 0 30px rgba(255, 159, 26, 0.1);
+  /* Amber Glow */
+}
+
+/* 5. Scroll Offset Correction for TOC */
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 100px;
+  /* Offset for sticky headers + breathing room */
+}

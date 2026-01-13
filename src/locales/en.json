@@ -1,0 +1,199 @@
+{
+    "Navbar": {
+        "maps": "Maps",
+        "mods": "Mods",
+        "guides": "Guides",
+        "tools": "Tools"
+    },
+    "Footer": {
+        "about": "About Us",
+        "contact": "Contact",
+        "sitemap": "Sitemap",
+        "bilibili_label": "Bilibili",
+        "steam_label": "Steam",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "disclaimer": "Disclaimer",
+        "copyright_suffix": "Unofficial Fan Site.",
+        "assets_declaration": "Escape From Duckov assets are property of",
+        "affiliation": "Not affiliated with the developers."
+    },
+    "Common": {
+        "search_placeholder": "Search for 'Red Keycard'...",
+        "search_button": "Find",
+        "status_online": "Online"
+    },
+    "Home": {
+        "Hero": {
+            "h1": "The Unofficial\nEscape From Duckov Wiki",
+            "h2": "Master the PVE world. Interactive Maps, Hideout Building, and Weapon Mods. Updated for Patch v1.3.12.",
+            "search_placeholder": "Warehouse Loot Route, Big Boy Boss, Circuit Board...",
+            "cta_primary": "START SCAVENGING",
+            "cta_secondary": "VIEW BLUEPRINTS"
+        },
+        "TrustBar": {
+            "patch_label": "CURRENT PATCH:",
+            "patch_val": "v1.3.12",
+            "status": "SERVER STATUS:",
+            "status_val": "PVE ONLINE",
+            "wipe_label": "DATABASE:",
+            "wipe_val": "UPDATED TODAY"
+        },
+        "SiloGrid": {
+            "card1_title": "The Average Duck's Guide",
+            "card1_sub": "From \"Zero to Hero\". Basic survival, hydration management, and PVE economy.",
+            "card2_title": "Maps & Extraction",
+            "card2_sub": "Ground Zero, Warehouse, and Farm Town maps with hidden extracts.",
+            "card3_title": "Blueprints & Crafting",
+            "card3_sub": "Where to find blueprints for Tier 3 weapons and Hideout upgrades.",
+            "card4_title": "Modding & Workshop",
+            "card4_sub": "Weapon customization guides and Steam Workshop mod recommendations."
+        },
+        "QuickIntel": {
+            "tip_badge": "TIPS",
+            "tip_title": "Don't Extract Too Early!",
+            "tip_content": "The \"Scrap\" Economy: Unlike other shooters, don't ignore junk items. Use the Workbench in your Bunker to dismantle scrap into raw materials. This is the only way to craft high-tier ammo and upgrades without spending cash.",
+            "tip_author": "— Duck \"Scav_King\"",
+            "meta_badge": "TOPS",
+            "meta_title": "Current Weapon Meta (v1.3.12):",
+            "meta_list": [
+                "Aim Assist Module: Best for clearing \"Ground Zero\" quickly.",
+                "Mosin Bipod: Essential for boss fights (Big Boy).",
+                "Explosive Rounds: High splash damage against groups of ducks."
+            ]
+        },
+        "LatestOps": {
+            "title": "Latest Operations",
+            "card1": "Hideout Upgrade Cost Table: Level 1 to Max",
+            "card2": "Top 5 Blueprints Locations on Map 2",
+            "card3": "Roguelite Mechanics: How Death Affects Progression"
+        },
+        "FAQ": {
+            "title": "Field Manual Q&A",
+            "q1": "Is Escape From Duckov multiplayer or PVP?",
+            "a1": "No. The game is strictly a single-player PVE extraction shooter. You fight against AI enemies (Hostile Ducks), not real players. While unofficial co-op mods exist on the Steam Workshop, the core game is designed for solo progression.",
+            "q2": "Does the game have native controller support?",
+            "a2": "Not officially. As of Patch v1.3.12, Duckov does not have native controller support. However, it is rated \"Playable\" on Steam Deck by using community layouts (Steam Input) to map WASD controls to joysticks.",
+            "q3": "Where is the save file location?",
+            "a3": "Your save data is located at: %AppData%\\LocalLow\\TeamSoda\\Duckov\\Saves. Tip: The game has a built-in \"Restore Backup\" feature in the main menu if your save gets corrupted.",
+            "q4": "What happens when I die?",
+            "a4": "You will lose all loot in your backpack and equipped gear. However, your Hideout upgrades, unlocked Blueprints, and Skill Tree progression are permanent. This \"Roguelite\" twist allows you to become stronger even after failed extractions.",
+            "q5": "How do I fix the \"Pink Texture\" glitch?",
+            "a5": "This is a known issue with older GPU drivers. Please update your drivers or verify the integrity of game files via Steam. If the issue persists, try disabling \"Rim Light\" in the graphics settings."
+        },
+        "MissionBriefing": {
+            "header": "SYSTEM_LOG // DUCKOV_INTELLIGENCE_DATABASE_V1.3",
+            "p1": "// TARGET DESIGNATION: ESCAPE FROM DUCKOV This database is dedicated to Escape From Duckov, the top-down PVE extraction shooter developed by Team Soda. Unlike traditional FPS titles, this indie gem combines tactical survival mechanics with Roguelite progression. Players assume the role of an Average Duck, tasked with scavenging dynamic maps like Ground Zero, The Slums, and Chemical Plant. The operational loop involves managing hydration, sanity, and inventory space while evading hostile AI ducks to secure a safe extraction.",
+            "p2": "// TACTICAL_ASSETS & UTILITY DuckovWiki is the premier Unofficial Field Manual designed to reduce the learning curve. Our archive includes: 1. Interactive Maps: Pinpointing all hidden Stashes, Blueprints, and Extraction Points. 2. Armory Data: Detailed stats for 50+ weapons, including Ammo Damage Charts and Recoil Control builds. 3. Hideout Planner: A complete calculator for Workbench upgrades, tracking required materials like Scrap Metal, Circuit Boards, and Duct Tape. 4. Quest Log: Step-by-step walkthroughs for NPC missions from Jeff the Duck, including key locations and item requirements.",
+            "p3": "// OPERATIONAL_STATUS Whether you are optimizing your Steam Deck layout or looking for the best Solo Farming Routes, this site is updated daily. All intel is verified for Steam Early Access (Patch v1.3.12). We strictly support legitimate single-player progression and do not condone cheats.",
+            "footer": "END_OF_LOG // PROCEED_TO_EXTRACTION"
+        }
+    },
+    "About": {
+        "eyebrow": "/// MISSION STATEMENT ///",
+        "title": "Operational Intelligence",
+        "intro": "DuckovWiki is a community-driven open intelligence initiative designed to increase operater survival rates in the Norvinsk region.",
+        "value1_title": "Accuracy First",
+        "value1_desc": "Our maps and data are verified by field operatives. If it's on the wiki, it's confirmed intel.",
+        "value2_title": "Open Source",
+        "value2_desc": "Built by the community, for the community. Contributions are welcome on our secure GitHub channels.",
+        "status_title": "Project Status",
+        "status_desc": "Established in 2024, DuckovWiki aims to fill the gap left by outdated information sources. We provide real-time updates following every major game patch, ensuring that loot tables, ballistics data, and extraction points are always current.",
+        "version_tag": "CURRENT_VERSION: v1.3.12 (BETA)",
+        "maintainer_tag": "MAINTAINER: [REDACTED]",
+        "server_tag": "SERVER_STATUS:"
+    },
+    "Contact": {
+        "eyebrow": "/// SECURE UPLINK ///",
+        "title": "Contact Us",
+        "intro": "We are here to help and answer any questions you might have.",
+        "desc": "We value your feedback and are committed to providing the best possible experience for our community. Whether you have noticed an error in our data, have a suggestion for a new feature, or simply want to say hello, we are ready to listen.",
+        "card_title": "Get in Touch",
+        "card_desc": "For all support requests, business inquiries, and DMCA reports, please reach out to us directly via email. We aim to respond to all legitimate inquiries within 48 hours.",
+        "email_label": "EMAIL ADDRESS"
+    },
+    "Terms": {
+        "title": "Terms of Service",
+        "eyebrow": "// OPERATIONAL_AGREEMENT",
+        "desc": "Conditions for accessing the Duckov tactical database.",
+        "date_tag": "EFFECTIVE_DATE: IMMEDIATE",
+        "h1": "1. Acceptance of Terms",
+        "p1": "By accessing or using the Site, you agree to be bound by these Terms and our Privacy Policy. If you do not agree, do not use the Site.",
+        "h2": "2. Use License",
+        "p2": "Permission is granted to temporarily download one copy of the materials (information or software) on DuckovWiki's website for personal, non-commercial transitory viewing only.",
+        "h3": "3. Disclaimer",
+        "p3": "The materials on DuckovWiki's website are provided on an \"as is\" basis. DuckovWiki makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.",
+        "h4": "4. Limitations",
+        "p4": "In no event shall DuckovWiki or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on DuckovWiki's website.",
+        "footer_law": "These terms are governed by the laws of the Russian Federation.",
+        "footer_contact": "Questions? Contact us at"
+    },
+    "Disclaimer": {
+        "title": "Operational Disavowal",
+        "eyebrow": "// LIABILITY_PROTOCOL",
+        "desc": "Standard limitation of liability and asset declaration.",
+        "date_tag": "LAST_UPDATE: 2024-12-21",
+        "h1": "1. General Information",
+        "p1": "The information provided on DuckovWiki is for general informational and educational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.",
+        "h2": "2. External Links",
+        "p2": "The Site may contain (or you may be sent through the Site) links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.",
+        "h3": "3. Game Assets",
+        "p3": "Escape From Duckov and all associated logos, characters, and assets are trademarks of Team Soda. DuckovWiki is an unofficial fan site and is not endorsed by or affiliated with Team Soda.",
+        "h4": "4. Tactical Advice",
+        "p4": "The game strategies and guides provided herein are based on player experience and may change with game updates. We are not responsible for any in-game losses (gear, loot, or sanity) resulting from the use of this information.",
+        "footer_law": "Use this intelligence at your own risk.",
+        "footer_contact": "Report inaccuracies to"
+    },
+    "Privacy": {
+        "title": "Privacy Protocol",
+        "eyebrow": "// CLASSIFIED_DOCUMENT_Protocol_88",
+        "desc": "Handling of operator data and surveillance logs.",
+        "date_tag": "LAST_REVISION: 2024-12-21 | CLEARANCE: PUBLIC",
+        "h1": "1. Data Collection",
+        "p1": "We collect minimal data necessary to maintain operational integrity. This includes IP addresses for security logging and cookie data for session management. We do not track your personal loadouts or extraction history.",
+        "h2": "2. Third Party Assets",
+        "p2": "This site uses external intelligence assets (Google Analytics) to monitor traffic. These services may collect information about your browser and device.",
+        "h3": "3. Cookies",
+        "p3_essential": "Essential Cookies:",
+        "p3_essential_desc": "Required for the site to function (e.g., language preference).",
+        "p3_analytics": "Analytical Cookies:",
+        "p3_analytics_desc": "Used to track popular pages and guide effectiveness.",
+        "h4": "4. Data Security",
+        "p4": "While we employ industry-standard encryption, no transmission over the internet is completely completely secure. We cannot guarantee the absolute security of your transmission data.",
+        "contact_title": "Contact Officer",
+        "contact_desc": "For privacy concerns, contact"
+    },
+    "Search": {
+        "title_prefix": "Tactical",
+        "title_highlight": "Database",
+        "title_suffix": "Search",
+        "placeholder": "Warehouse Loot Route, Big Boy Boss, Circuit Board...",
+        "results_for": "Results for",
+        "found_badge": "FOUND",
+        "access_action": "Access File",
+        "no_results_title": "No Intel Found",
+        "no_results_desc": "Try adjusting your search terms or checking the classification level.",
+        "types": {
+            "guides": "GUIDE",
+            "maps": "MAP",
+            "mods": "MOD",
+            "tools": "TOOL",
+            "doc": "DOC"
+        }
+    },
+    "GuidesPage": {
+        "title_prefix": "Field",
+        "title_highlight": "Manuals",
+        "subtitle": "// TACTICAL_DATABASE_ACCESS",
+        "description": "Essential survival knowledge, combat tactics, and economic strategies.",
+        "read_more": "READ MANUAL"
+    },
+    "categories": {
+        "General": "Beginner's Guide",
+        "Loadouts": "Loadouts",
+        "Mechanics": "Mechanics",
+        "Tactical Utilities": "Tactical Utilities",
+        "Tactical Maps": "Tactical Maps",
+        "Classified Mods": "Classified Mods"
+    }
+}
