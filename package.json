@@ -7,7 +7,7 @@
     "build": "next build --webpack",
     "start": "next start --webpack",
     "lint": "eslint",
-    "pages:build": "npx @cloudflare/next-on-pages && cp -R public/* .vercel/output/static/",
+    "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev .vercel/output/static"
   },
   "dependencies": {

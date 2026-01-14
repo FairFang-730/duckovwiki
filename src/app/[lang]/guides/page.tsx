@@ -4,6 +4,7 @@ import { getAllArticles } from "@/lib/mdx";
 import GuidesClient from "./GuidesClient";
 
 export const dynamicParams = false;
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
