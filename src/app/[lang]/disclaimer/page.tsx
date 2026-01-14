@@ -5,7 +5,7 @@ import { generateStaticSEO } from "../../../config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
-    return generateStaticSEO('disclaimer', lang as Locale);
+    return generateStaticSEO('disclaimer', lang as Locale, '/disclaimer');
 }
 
 export default async function DisclaimerPage({ params }: { params: Promise<{ lang: string }> }) {

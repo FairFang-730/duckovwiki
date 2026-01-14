@@ -147,7 +147,7 @@ export const staticSEO: Record<SupportedPages, Record<Locale, SEOData>> = {
     },
 };
 
-export function generateStaticSEO(page: SupportedPages, lang: Locale): Metadata {
+export function generateStaticSEO(page: SupportedPages, lang: Locale, path?: string): Metadata {
     // Fallback to 'en' if the language is not supported or data is missing
     const effectiveLang = staticSEO[page] && staticSEO[page][lang] ? lang : 'en';
     const data = staticSEO[page][effectiveLang];
@@ -164,7 +164,8 @@ export function generateStaticSEO(page: SupportedPages, lang: Locale): Metadata 
     const templateTitle = `%s | ${siteConfig.name}`;
     const absoluteTitle = data.title;
 
-    return {
+    // Construct base metadata
+    const metadata: Metadata = {
         title: absoluteTitle
             ? { default: defaultTitle, template: templateTitle, absolute: absoluteTitle }
             : { default: defaultTitle, template: templateTitle },
@@ -177,4 +178,25 @@ export function generateStaticSEO(page: SupportedPages, lang: Locale): Metadata 
             siteName: siteConfig.name,
         }
     };
+
+    // Add alternates if path is provided
+    if (path) {
+        // Ensure path starts with /
+        const safePath = path.startsWith('/') ? path : `/${path}`;
+        // If path is exactly '/', treat it as empty for concatenation to avoid trailing slash
+        // unless you explicitly want https://domain/en/
+        // Next.js default is no trailing slash.
+        const urlSuffix = safePath === '/' ? '' : safePath;
+
+        metadata.alternates = {
+            canonical: `https://duckovwiki.fun/${lang}${urlSuffix}`,
+            languages: {
+                'en': `https://duckovwiki.fun/en${urlSuffix}`,
+                'zh-Hans': `https://duckovwiki.fun/zh${urlSuffix}`,
+                'x-default': `https://duckovwiki.fun/en${urlSuffix}`,
+            }
+        };
+    }
+
+    return metadata;
 }

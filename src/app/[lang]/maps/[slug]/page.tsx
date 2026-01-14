@@ -16,6 +16,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: map.seoTitle || `${map.title} Map | Extractions & Loot`,
         description: map.seoDescription || `Detailed map of ${map.title} with all extracts, boss locations, and loot spawns.`,
         keywords: map.seoKeywords || map.tags,
+        alternates: {
+            canonical: `https://duckovwiki.fun/${lang}/maps/${slug}`,
+            languages: {
+                'en': `https://duckovwiki.fun/en/maps/${slug}`,
+                'zh-Hans': `https://duckovwiki.fun/zh/maps/${slug}`,
+                'x-default': `https://duckovwiki.fun/en/maps/${slug}`,
+            }
+        }
     };
 }
 

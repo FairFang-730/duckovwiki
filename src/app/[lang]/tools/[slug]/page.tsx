@@ -17,6 +17,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: tool.seoTitle || `${tool.title} Download | DuckovWiki`,
         description: tool.seoDescription || tool.description,
         keywords: tool.seoKeywords || tool.tags,
+        alternates: {
+            canonical: `https://duckovwiki.fun/${lang}/tools/${slug}`,
+            languages: {
+                'en': `https://duckovwiki.fun/en/tools/${slug}`,
+                'zh-Hans': `https://duckovwiki.fun/zh/tools/${slug}`,
+                'x-default': `https://duckovwiki.fun/en/tools/${slug}`,
+            }
+        }
     };
 }
 

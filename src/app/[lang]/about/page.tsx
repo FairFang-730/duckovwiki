@@ -4,7 +4,7 @@ import { generateStaticSEO } from "../../../config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
-    return generateStaticSEO('about', lang as Locale);
+    return generateStaticSEO('about', lang as Locale, '/about');
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {

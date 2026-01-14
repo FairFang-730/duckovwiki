@@ -20,6 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         title: article.seoTitle || `${article.title} | DuckovWiki`,
         description: article.seoDescription || article.description,
         keywords: article.seoKeywords || article.tags,
+        alternates: {
+            canonical: `https://duckovwiki.fun/${lang}/guides/${slug}`,
+            languages: {
+                'en': `https://duckovwiki.fun/en/guides/${slug}`,
+                'zh-Hans': `https://duckovwiki.fun/zh/guides/${slug}`,
+                'x-default': `https://duckovwiki.fun/en/guides/${slug}`,
+            }
+        }
     };
 }
 

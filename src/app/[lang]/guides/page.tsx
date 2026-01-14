@@ -5,7 +5,7 @@ import GuidesClient from "./GuidesClient";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
-    return generateStaticSEO('guides', lang as Locale);
+    return generateStaticSEO('guides', lang as Locale, '/guides');
 }
 
 export default async function GuidesIndexPage({ params }: { params: Promise<{ lang: string }> }) {

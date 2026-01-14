@@ -5,7 +5,7 @@ import { generateStaticSEO } from "../../../config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
-    return generateStaticSEO('privacy', lang as Locale);
+    return generateStaticSEO('privacy', lang as Locale, '/privacy');
 }
 
 export default async function PrivacyPage({ params }: { params: Promise<{ lang: string }> }) {

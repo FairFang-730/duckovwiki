@@ -69,6 +69,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.7,
             })
         }
+
+        // 5. Dynamic Articles (Tools)
+        const tools = await getAllArticles(locale, 'tools')
+        for (const tool of tools) {
+            sitemapEntries.push({
+                url: `${baseUrl}/${locale}/tools/${tool.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'monthly',
+                priority: 0.7,
+            })
+        }
     }
 
     return sitemapEntries

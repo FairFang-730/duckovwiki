@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     if (!locales.includes(lang as Locale)) {
         return {};
     }
-    return generateStaticSEO('home', lang as Locale);
+    return generateStaticSEO('home', lang as Locale, '/');
 }
 
 // 2. Server Component: Data Fetching & Rendering Client Component

@@ -5,7 +5,7 @@ import { generateStaticSEO } from "../../../config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
-    return generateStaticSEO('contact', lang as Locale);
+    return generateStaticSEO('contact', lang as Locale, '/contact');
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ lang: string }> }) {

@@ -225,9 +225,17 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                             <Link href={`/${locale}/guides/${guide.slug}`} key={idx} className="group cursor-pointer block">
                                 <article className="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-zinc-600 transition-all hover:shadow-2xl">
                                     <div className="aspect-video bg-zinc-800 relative overflow-hidden">
-                                        <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                                            <ImageIcon className="w-10 h-10 text-zinc-700" strokeWidth={1} />
-                                        </div>
+                                        {guide.image ? (
+                                            <img
+                                                src={guide.image}
+                                                alt={guide.title}
+                                                className="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                                                <ImageIcon className="w-10 h-10 text-zinc-700" strokeWidth={1} />
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="p-5">
                                         <div className="flex items-center gap-2 mb-3 text-xs text-zinc-500 font-mono">
