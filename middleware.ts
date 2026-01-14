@@ -7,15 +7,24 @@ import { locales, defaultLocale } from '@/config/i18n';
 // Supported locales 
 // Note: Ensure this matches src/config/i18n.ts
 
+const MAX_HEADER_LENGTH = 1000;
+
 // Advanced locale detection using algorithms
 function getLocale(request: NextRequest): string {
-    const headers = { 'accept-language': request.headers.get('accept-language') || '' };
-    const languages = new Negotiator({ headers }).languages();
-
     try {
+        // Defensive coding: limit header length to prevent DOS/overflow
+        const rawAcceptLanguage = request.headers.get('accept-language') || '';
+        const safeAcceptLanguage = rawAcceptLanguage.length > MAX_HEADER_LENGTH
+            ? rawAcceptLanguage.substring(0, MAX_HEADER_LENGTH)
+            : rawAcceptLanguage;
+
+        const headers = { 'accept-language': safeAcceptLanguage };
+        const languages = new Negotiator({ headers }).languages();
+
         return match(languages, locales, defaultLocale);
     } catch (e) {
-        // Fallback if match fails
+        // Fallback if match fails or Negotiator throws (e.g. malformed headers)
+        console.error('Locale detection failed, falling back to default:', e);
         return defaultLocale;
     }
 }
