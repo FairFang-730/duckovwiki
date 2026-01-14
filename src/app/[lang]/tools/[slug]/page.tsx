@@ -17,7 +17,6 @@ export async function generateStaticParams() {
     return params;
 }
 
-export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; lang: string }> }) {

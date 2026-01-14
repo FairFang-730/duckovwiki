@@ -2,7 +2,6 @@ import { getDictionary, Locale } from "../../../lib/i18n";
 import PrivacyClient from "./PrivacyClient";
 
 export const dynamicParams = false;
-export const dynamic = 'force-static';
 
 
 import { generateStaticSEO } from "../../../config/seo";

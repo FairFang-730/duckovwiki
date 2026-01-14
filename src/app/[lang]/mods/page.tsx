@@ -3,7 +3,6 @@ import ModsClient from "./ModsClient";
 import { getAllArticles } from "@/lib/mdx";
 
 export const dynamicParams = false;
-export const dynamic = 'force-static';
 
 
 import { generateStaticSEO } from "@/config/seo";
