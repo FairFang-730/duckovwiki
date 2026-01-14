@@ -3,7 +3,18 @@ import { getAllArticles, getArticleBySlug } from "@/lib/mdx";
 import { Locale } from "@/lib/i18n";
 import ModDetailClient from "./ModDetailClient";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { locales } from "@/config/i18n";
 
+export async function generateStaticParams() {
+    const params = [];
+    for (const lang of locales) {
+        const articles = await getAllArticles(lang, 'mods');
+        for (const article of articles) {
+            params.push({ lang, slug: article.slug });
+        }
+    }
+    return params;
+}
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; lang: string }> }) {
     const { slug, lang } = await params;
     const mod = await getArticleBySlug(slug, lang, 'mods');
