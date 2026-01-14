@@ -110,6 +110,7 @@ export async function getArticleBySlug(slug: string, lang: string, directory: st
             slug,
             image,
             content: serialized,
+            rawContent: sourceString, // Expose raw source for RSC rendering
             headings,
             category,     // Enforce top-level category
             subcategory,  // Enforce internal grouping
@@ -139,6 +140,7 @@ export async function getAllArticles(lang: string, directory: string): Promise<A
                 const { serialize } = await import('next-mdx-remote/serialize');
                 const serialized = await serialize(source, { parseFrontmatter: true });
                 const frontmatter = serialized.frontmatter || {};
+                const sourceString = source as string;
 
                 // Auto-extract first image if not present in frontmatter
                 let image = frontmatter.image;
@@ -164,6 +166,7 @@ export async function getAllArticles(lang: string, directory: string): Promise<A
                     category: directory,
                     subcategory: getSubcategory(frontmatter, directory, subfolder),
                     date: frontmatter.date || new Date().toISOString(), // Ensure date exists for sorting
+                    rawContent: sourceString,
                 } as Article;
             })
         );

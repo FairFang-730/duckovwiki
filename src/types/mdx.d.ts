@@ -40,6 +40,7 @@ interface ArticleFrontmatter {
 interface Article extends ArticleFrontmatter {
     slug: string;
     content: MDXRemoteSerializeResult;
+    rawContent: string;
     headings?: { level: number; text: string; slug: string }[];
 
     // Explicitly override to ensure these exist on the final object

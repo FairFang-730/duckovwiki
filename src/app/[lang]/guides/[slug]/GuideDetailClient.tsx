@@ -3,7 +3,6 @@
 import { Breadcrumb } from "@/components/ui/Breadcrumbs";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
-import { MDXRemote } from 'next-mdx-remote';
 import { WeaponTable } from '@/components/mdx/WeaponTable';
 import { GuideTable } from '@/components/mdx/GuideTable';
 import { TableOfContents } from "@/components/mdx/TableOfContents";
@@ -13,6 +12,7 @@ interface GuideDetailClientProps {
     article: Article;
     prevArticle?: { title: string; slug: string } | null;
     nextArticle?: { title: string; slug: string } | null;
+    children?: React.ReactNode;
 }
 
 const components = {
@@ -20,7 +20,7 @@ const components = {
     GuideTable: (props: any) => <GuideTable {...props} />,
 };
 
-export default function GuideDetailClient({ lang, article, prevArticle, nextArticle }: GuideDetailClientProps) {
+export default function GuideDetailClient({ lang, article, prevArticle, nextArticle, children }: GuideDetailClientProps) {
     const locale = lang;
 
     const hydratedComponents = {
@@ -89,13 +89,13 @@ export default function GuideDetailClient({ lang, article, prevArticle, nextArti
                             className="mb-8 lg:hidden"
                         />
 
-                        {/* Guide Content - Rendered via MDXRemote */}
+                        {/* Guide Content - Rendered on Server */}
                         <div className="prose prose-invert prose md:prose-lg prose-yellow max-w-none 
                                 prose-headings:font-bold prose-headings:tracking-tight 
                                 prose-p:text-neutral-300 [&_p]:text-neutral-300 prose-p:leading-8
                                 prose-li:text-neutral-300 [&_li]:text-neutral-300
                                 prose-strong:text-white">
-                            <MDXRemote {...article.content} components={hydratedComponents} />
+                            {children}
                         </div>
 
                         {/* Prev/Next Navigation */}

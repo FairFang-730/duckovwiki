@@ -1,8 +1,11 @@
 import { getDictionary, Locale } from "@/lib/i18n";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { locales } from "@/config/i18n";
 
-export const runtime = 'edge';
+export async function generateStaticParams() {
+    return locales.map((lang) => ({ lang }));
+}
 
 // Metadata is now inherited from Root Layout, but can be overridden per lang if needed (seo.ts handles that in page.tsx)
 

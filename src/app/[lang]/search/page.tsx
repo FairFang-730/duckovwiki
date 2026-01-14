@@ -12,6 +12,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     }
 }
 
+import { Suspense } from "react";
+
+// ... existing imports ...
+
+// ... generateMetadata ...
+
 export default async function SearchPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     const locale = lang as Locale;
@@ -33,5 +39,9 @@ export default async function SearchPage({ params }: { params: Promise<{ lang: s
         ...tools.map(item => ({ ...item, contentType: 'tools' })),
     ];
 
-    return <SearchClient lang={locale} dict={dict} allContent={allContent} />;
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-zinc-950 pt-24 text-center text-zinc-500">Loading Search...</div>}>
+            <SearchClient lang={locale} dict={dict} allContent={allContent} />
+        </Suspense>
+    );
 }

@@ -4,6 +4,9 @@ import { Locale } from "@/lib/i18n";
 import GuideDetailClient from "./GuideDetailClient";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { locales } from "@/config/i18n";
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { WeaponTable } from '@/components/mdx/WeaponTable';
+import { GuideTable } from '@/components/mdx/GuideTable';
 
 export async function generateStaticParams() {
     const params = [];
@@ -74,8 +77,27 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
     const prevArticle = currentIndex > 0 ? allGuides[currentIndex - 1] : null;
     const nextArticle = currentIndex < allGuides.length - 1 ? allGuides[currentIndex + 1] : null;
 
-    // With 'serialize' strategy, article.content is now a JSON object, safe to pass directly.
+    // With 'serialize' strategy (LEGACY), article.content is a JSON object.
+    // BUT we are switching to RSC strategy to fix hooks issues.
+    // We use article.rawContent which we exposed in mdx.ts
     const cleanArticle = JSON.parse(JSON.stringify(article));
+
+    // Server-side MDX Rendering
+    // We must define components here to pass them to MDXRemote
+    const components = {
+        WeaponTable: (props: any) => <WeaponTable {...props} lang={locale} />,
+        GuideTable: (props: any) => <GuideTable {...props} lang={locale} />,
+        h2: (props: any) => <h2 {...props} className="text-xl font-bold text-white mt-8 mb-4 flex items-center gap-2 after:content-[''] after:h-px after:flex-1 after:bg-white/10" />,
+        h3: (props: any) => <h3 {...props} className="text-lg font-bold text-white mt-6 mb-3" />,
+        img: (props: any) => (
+            <img
+                {...props}
+                className="rounded-xl border border-white/5 shadow-2xl my-8 w-full"
+                loading="lazy"
+            />
+        ),
+    };
+
     const cleanPrev = prevArticle ? { title: prevArticle.title, slug: prevArticle.slug } : null;
     const cleanNext = nextArticle ? { title: nextArticle.title, slug: nextArticle.slug } : null;
 
@@ -101,7 +123,9 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
                 article={cleanArticle}
                 prevArticle={cleanPrev}
                 nextArticle={cleanNext}
-            />
+            >
+                <MDXRemote source={article.rawContent} components={components} />
+            </GuideDetailClient>
         </>
     );
 }

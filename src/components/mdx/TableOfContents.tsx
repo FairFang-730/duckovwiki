@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import React from "react";
 
@@ -42,8 +44,8 @@ export function TableOfContents({ headings, className = "" }: TableOfContentsPro
                         href={`#${heading.slug}`}
                         onClick={(e) => handleScroll(e, heading.slug)}
                         className={`group flex items-center gap-3 py-2 transition-all duration-300 cursor-pointer ${heading.level === 2
-                                ? 'text-neutral-200 hover:text-white hover:bg-white/5 pl-3 rounded-md'
-                                : 'text-neutral-500 hover:text-neutral-300 pl-8 text-xs'
+                            ? 'text-neutral-200 hover:text-white hover:bg-white/5 pl-3 rounded-md'
+                            : 'text-neutral-500 hover:text-neutral-300 pl-8 text-xs'
                             }`}
                     >
                         {/* Tactical Marker for H2 */}
