@@ -19,7 +19,6 @@ export async function generateStaticParams() {
     return params;
 }
 
-// FORCE STATIC: Crucial for Cloudflare to avoid 5xx runtime errors
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
