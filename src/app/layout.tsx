@@ -15,6 +15,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "DuckovWiki | The Ultimate Escape From Duckov Database & Guide",
     description: "Community wiki for Escape From Duckov. Interactive maps, ammo charts, weapon builds, and quest guides. Updated for Patch v1.2.",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 };
 
 export default function RootLayout({
