@@ -30,7 +30,7 @@ export default function Footer({ dict, lang }: { dict: Dictionary, lang: string 
                     <Link href={`/${lang}/contact`} className="hover:text-yellow-500 transition-colors duration-200">
                         {dict.Footer.contact}
                     </Link>
-                    <Link href={`/${lang}/sitemap`} className="hover:text-yellow-500 transition-colors duration-200">
+                    <Link href="/sitemap.xml" className="hover:text-yellow-500 transition-colors duration-200">
                         {dict.Footer.sitemap}
                     </Link>
 

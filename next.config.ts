@@ -13,6 +13,19 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
