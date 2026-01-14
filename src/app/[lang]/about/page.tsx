@@ -3,7 +3,7 @@ import AboutClient from "./AboutClient";
 import { generateStaticSEO } from "../../../config/seo";
 
 export const dynamicParams = false;
-export const dynamic = 'force-static';
+
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
