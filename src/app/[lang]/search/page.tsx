@@ -3,6 +3,8 @@ import { generateStaticSEO } from "@/config/seo";
 import { getAllArticles } from "@/lib/mdx";
 import SearchClient from "./SearchClient";
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     // We can reuse a generic SEO or specific search SEO

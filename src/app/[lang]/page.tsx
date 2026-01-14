@@ -5,6 +5,8 @@ import { getAllArticles } from "../../lib/mdx";
 import HomeClient from "./HomeClient";
 
 // 1. Server Component: Metadata Generation
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     // Validate locale

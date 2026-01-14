@@ -3,6 +3,8 @@ import { generateStaticSEO } from "@/config/seo";
 import { getAllArticles } from "@/lib/mdx";
 import GuidesClient from "./GuidesClient";
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     return generateStaticSEO('guides', lang as Locale, '/guides');

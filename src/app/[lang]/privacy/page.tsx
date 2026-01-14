@@ -1,6 +1,8 @@
 import { getDictionary, Locale } from "../../../lib/i18n";
 import PrivacyClient from "./PrivacyClient";
 
+export const dynamicParams = false;
+
 import { generateStaticSEO } from "../../../config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {

@@ -1,6 +1,8 @@
 import { getDictionary, Locale } from "../../../lib/i18n";
 import TermsClient from "./TermsClient";
 
+export const dynamicParams = false;
+
 import { generateStaticSEO } from "../../../config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {

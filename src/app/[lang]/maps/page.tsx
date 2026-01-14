@@ -2,6 +2,8 @@ import { Locale, locales, getDictionary } from "@/lib/i18n";
 import MapsClient from "./MapsClient";
 import { getAllArticles } from "@/lib/mdx";
 
+export const dynamicParams = false;
+
 import { generateStaticSEO } from "@/config/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
