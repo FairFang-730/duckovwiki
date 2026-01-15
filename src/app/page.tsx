@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
             canonical: 'https://duckovwiki.fun/en',
             languages: {
                 'en': 'https://duckovwiki.fun/en',
-                'zh': 'https://duckovwiki.fun/zh',
+                'zh-Hans': 'https://duckovwiki.fun/zh',
                 'x-default': 'https://duckovwiki.fun/en',
             },
         },
