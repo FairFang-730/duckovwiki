@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// Force Edge Runtime for Cloudflare Pages compatibility
-export const runtime = 'edge';
+// Force Edge Runtime removed for static export
+// export const runtime = 'edge';
 
 const geistSans = Geist({
     variable: "--font-geist-sans",

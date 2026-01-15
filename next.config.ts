@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: 'export', // Removed to support @cloudflare/next-on-pages (Edge Runtime)
+  output: 'export',
 
-  // Optional: Disable image optimization if not using a paid loader
-  // images: { unoptimized: true },
+  images: { unoptimized: true },
 
   webpack: (config) => {
     config.module.rules.push({
