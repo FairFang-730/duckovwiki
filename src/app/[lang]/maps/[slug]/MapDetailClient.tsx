@@ -12,30 +12,20 @@ interface MapDetailClientProps {
     map: Article;
     prevArticle?: { title: string; slug: string } | null;
     nextArticle?: { title: string; slug: string } | null;
+    children?: React.ReactNode;
 }
 
-const components = {
-    WeaponTable: (props: any) => <WeaponTable {...props} />,
-};
-
-export default function MapDetailClient({ map, lang, prevArticle, nextArticle }: MapDetailClientProps) {
-    const locale = lang;
-
-    const hydratedComponents = {
-        ...components,
-        WeaponTable: (props: any) => <WeaponTable {...props} lang={locale} />,
-        h2: (props: any) => <h2 {...props} className="text-xl font-bold text-white mt-8 mb-4" />,
-        h3: (props: any) => <h3 {...props} className="text-lg font-bold text-white mt-6 mb-3" />,
-    };
+export default function MapDetailClient({ map, lang, prevArticle, nextArticle, children }: MapDetailClientProps) {
+    // Legacy hydrated components are no longer needed as rendering happens on server
 
     return (
         <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
             <div className="mb-8 pl-0">
                 <Breadcrumb
                     items={[
-                        { label: 'HOME', href: `/${locale}` },
-                        { label: 'MAPS', href: `/${locale}/maps` },
-                        { label: map.title.toUpperCase(), href: `/${locale}/maps/${map.slug}` }
+                        { label: 'HOME', href: `/${lang}` },
+                        { label: 'MAPS', href: `/${lang}/maps` },
+                        { label: map.title.toUpperCase(), href: `/${lang}/maps/${map.slug}` }
                     ]}
                 />
             </div>
@@ -78,14 +68,14 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle }:
                                 prose-p:text-neutral-300 [&_p]:text-neutral-300 prose-p:leading-8
                                 prose-li:text-neutral-300 [&_li]:text-neutral-300
                                 prose-strong:text-white">
-                            <MDXRemote {...map.content} components={hydratedComponents} />
+                            {children}
                         </div>
 
                         {/* Prev/Next Navigation */}
                         <div className="mt-16 pt-8 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-6">
                             {prevArticle ? (
                                 <Link
-                                    href={`/${locale}/maps/${prevArticle.slug}`}
+                                    href={`/${lang}/maps/${prevArticle.slug}`}
                                     className="group flex flex-col items-start p-4 rounded-lg border border-white/5 hover:border-yellow-500/50 bg-neutral-900/30 transition-all text-left"
                                 >
                                     <span className="text-xs text-neutral-500 font-mono mb-2 group-hover:text-yellow-500">
@@ -99,7 +89,7 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle }:
 
                             {nextArticle ? (
                                 <Link
-                                    href={`/${locale}/maps/${nextArticle.slug}`}
+                                    href={`/${lang}/maps/${nextArticle.slug}`}
                                     className="group flex flex-col items-end p-4 rounded-lg border border-white/5 hover:border-yellow-500/50 bg-neutral-900/30 transition-all text-right"
                                 >
                                     <span className="text-xs text-neutral-500 font-mono mb-2 group-hover:text-yellow-500">
