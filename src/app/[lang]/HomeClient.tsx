@@ -91,7 +91,7 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
             {/* LAYER 2: TRUST BAR */}
             <div className="w-full border-y border-zinc-800 bg-zinc-900/80 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex flex-wrap justify-center sm:justify-between items-center gap-6 text-xs font-mono tracking-wide text-zinc-400">
+                    <div className="w-fit mx-auto sm:w-full flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-2 sm:gap-6 text-xs font-mono tracking-wide text-zinc-400">
 
                         {/* Status (Green) */}
                         <div className="flex items-center gap-2">
@@ -103,7 +103,7 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                         </div>
 
                         {/* Patch (Blue) */}
-                        <div className="hidden sm:flex items-center gap-2">
+                        <div className="flex items-center gap-2">
                             <span className="relative flex h-2.5 w-2.5">
                                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
                             </span>
