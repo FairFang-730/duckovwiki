@@ -98,7 +98,11 @@ export default async function MapDetailPage({ params }: { params: Promise<{ slug
                 prevArticle={cleanPrev}
                 nextArticle={cleanNext}
             >
-                <MDXRemote source={map.rawContent} components={components} />
+                <MDXRemote
+                    source={map.rawContent}
+                    components={components}
+                    options={{ parseFrontmatter: true }}
+                />
             </MapDetailClient>
         </>
     );

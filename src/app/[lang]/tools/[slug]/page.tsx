@@ -99,7 +99,11 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
                 prevArticle={cleanPrev}
                 nextArticle={cleanNext}
             >
-                <MDXRemote source={tool.rawContent} components={components} />
+                <MDXRemote
+                    source={tool.rawContent}
+                    components={components}
+                    options={{ parseFrontmatter: true }}
+                />
             </ToolDetailClient>
         </>
     );

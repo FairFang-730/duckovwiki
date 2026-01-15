@@ -99,7 +99,11 @@ export default async function ModDetailPage({ params }: { params: Promise<{ slug
                 prevArticle={cleanPrev}
                 nextArticle={cleanNext}
             >
-                <MDXRemote source={mod.rawContent} components={components} />
+                <MDXRemote
+                    source={mod.rawContent}
+                    components={components}
+                    options={{ parseFrontmatter: true }}
+                />
             </ModDetailClient>
         </>
     );

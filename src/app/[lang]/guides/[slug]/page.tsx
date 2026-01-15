@@ -122,7 +122,11 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
                 prevArticle={cleanPrev}
                 nextArticle={cleanNext}
             >
-                <MDXRemote source={article.rawContent} components={components} />
+                <MDXRemote
+                    source={article.rawContent}
+                    components={components}
+                    options={{ parseFrontmatter: true }}
+                />
             </GuideDetailClient>
         </>
     );
