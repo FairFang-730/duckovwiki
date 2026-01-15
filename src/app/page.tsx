@@ -1,38 +1,29 @@
-import HomePage, { generateMetadata as generateHomeMetadata } from './[lang]/page';
 import { Metadata } from 'next';
-import { getDictionary } from '@/lib/i18n';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import HomePage from './[lang]/page';
 
-// 1. Metadata Generation with Canonical & Hreflang
-export async function generateMetadata(): Promise<Metadata> {
-    // Reuse existing English metadata generation
-    const baseMetadata = await generateHomeMetadata({ params: Promise.resolve({ lang: 'en' }) });
+// Force static for the root page to ensure compatibility with output: 'export'
+// This creates a physical index.html at the root.
+export const dynamic = 'force-static';
 
-    return {
-        ...baseMetadata,
-        alternates: {
-            canonical: 'https://duckovwiki.fun/en',
-            languages: {
-                'en': 'https://duckovwiki.fun/en',
-                'zh-Hans': 'https://duckovwiki.fun/zh', // zh-Hans is standard for Simplified Chinese
-                'x-default': 'https://duckovwiki.fun/',
-            },
+// SEO Configuration:
+// 1. Canonical: Points to /en to consolidate ranking signals (prevent duplicate content)
+// 2. Hreflang: Helps Google distinguish regional/language versions
+// 3. x-default: Tells Google that the root URL is the default entry point (or points to default content)
+export const metadata: Metadata = {
+    title: 'Escape from Duckov Wiki',
+    alternates: {
+        canonical: 'https://duckovwiki.fun/en',
+        languages: {
+            'en': 'https://duckovwiki.fun/en',
+            'zh': 'https://duckovwiki.fun/zh',
+            'x-default': 'https://duckovwiki.fun',
         },
-    };
-}
+    },
+};
 
-// 2. Render English Homepage Content Directly with Layout
-export default async function RootPage() {
-    const dict = await getDictionary('en');
-
-    return (
-        <>
-            <Navbar dict={dict} lang="en" />
-            <main className="flex-grow z-10 relative">
-                <HomePage params={Promise.resolve({ lang: 'en' })} />
-            </main>
-            <Footer dict={dict} lang="en" />
-        </>
-    );
+export default function RootPage() {
+    // Mirror Strategy:
+    // Directly render the English homepage component.
+    // We pass a resolved Promise for params to match Next.js 15+ Async Server Component pattern.
+    return <HomePage params={Promise.resolve({ lang: 'en' })} />;
 }
