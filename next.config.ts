@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
       test: /\.mdx$/,
       type: 'asset/source',
     });
+    return config;
   },
 };
 
