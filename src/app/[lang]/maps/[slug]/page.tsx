@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAllArticles, getArticleBySlug } from "@/lib/mdx";
-import { Locale } from "@/lib/i18n";
+import { Locale, getDictionary } from "@/lib/i18n";
 // Client component
 import MapDetailClient from "./MapDetailClient";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -91,6 +91,9 @@ export default async function MapDetailPage({ params }: { params: Promise<{ slug
         ),
     };
 
+    // Get dictionary
+    const dictionary = await getDictionary(locale);
+
     return (
         <>
             <JsonLd data={jsonLd} />
@@ -99,6 +102,7 @@ export default async function MapDetailPage({ params }: { params: Promise<{ slug
                 map={cleanArticle}
                 prevArticle={cleanPrev}
                 nextArticle={cleanNext}
+                dictionary={dictionary}
             >
                 <MDXRemote
                     source={map.rawContent}

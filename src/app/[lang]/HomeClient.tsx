@@ -87,14 +87,14 @@ export default function HomeClient({ dict, lang, latestContent }: { dict: Dictio
                         </Link>
                     </div>
 
-                    <div>
+                    <div className="flex justify-center">
                         <a
                             href="https://store.steampowered.com/app/3167020/Escape_From_Duckov/"
                             target="_blank"
                             rel="noopener noreferrer nofollow"
-                            className="inline-flex items-center gap-2 px-6 py-2 bg-[#171a21] hover:bg-[#2a475e] text-[#c7d5e0] font-bold rounded-lg transition-all border border-white/10 hover:border-[#66c0f4] hover:shadow-[0_0_15px_rgba(102,192,244,0.3)] text-sm"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#171a21] hover:bg-[#2a475e] text-[#c7d5e0] font-bold rounded-lg transition-all border border-white/10 hover:border-[#66c0f4] hover:shadow-[0_0_20px_rgba(102,192,244,0.4)] shadow-lg text-sm w-full sm:w-auto"
                         >
-                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 flex-shrink-0">
                                 <path d="M11.979 0C5.666 0 .548 5.135.548 11.472c0 2.923 1.096 5.6 2.912 7.64l.056.059 4.314-1.78a2.951 2.951 0 01-.06-.554c0-1.637 1.328-2.964 2.965-2.964s2.964 1.327 2.964 2.964c0 1.638-1.328 2.965-2.964 2.965a2.95 2.95 0 01-1.666-.516l-3.266 4.093a11.408 11.408 0 006.176 1.849c6.314 0 11.432-5.135 11.432-11.472S18.293 0 11.979 0zM7.34 16.03c.89 0 1.611.724 1.611 1.617 0 .894-.721 1.618-1.611 1.618-.89 0-1.612-.724-1.612-1.618 0-.893.722-1.617 1.612-1.617zm.582 1.487c-.672.483-1.604.321-2.085-.353-.48-.675-.32-1.61.352-2.094.672-.483 1.603-.321 2.084.354.481.674.321 1.61-.351 2.093z" />
                             </svg>
                             <span>{t.Hero.play_steam_btn}</span>

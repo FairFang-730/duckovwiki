@@ -11,7 +11,7 @@ export default function MapsClient({ lang, maps, dictionary }: { lang: Locale, m
 
     // Group maps by subcategory
     const groupedMaps = maps.reduce((acc: Record<string, Article[]>, map) => {
-        const key = map.subcategory || 'Tactical Maps';
+        const key = map.subcategory || 'Maps Guides';
         if (!acc[key]) {
             acc[key] = [];
         }
@@ -34,11 +34,11 @@ export default function MapsClient({ lang, maps, dictionary }: { lang: Locale, m
                 {/* Header */}
                 <header className="mb-12">
                     <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">
-                        Tactical <span className="text-yellow-500">Maps</span>
+                        {dictionary.MapsPage?.title_prefix || 'Tactical'} <span className="text-yellow-500">{dictionary.MapsPage?.title_highlight || 'Maps'}</span>
                     </h1>
                     <p className="text-neutral-400 max-w-2xl font-mono text-sm leading-relaxed border-l-2 border-yellow-500 pl-4">
-                        {`// SATELLITE_IMAGERY_AUTHORIZED`} <br />
-                        Detailed charts, extraction points, and high-value target locations.
+                        {dictionary.MapsPage?.subtitle || '// SATELLITE_IMAGERY_AUTHORIZED'} <br />
+                        {dictionary.MapsPage?.description || 'Detailed charts, extraction points, and high-value target locations.'}
                     </p>
                 </header>
 
@@ -102,7 +102,7 @@ export default function MapsClient({ lang, maps, dictionary }: { lang: Locale, m
 
                                             {/* Footer Action */}
                                             <div className="flex items-center text-xs font-mono text-zinc-500 font-bold group-hover:text-yellow-500 transition-colors mt-auto uppercase tracking-wider">
-                                                <span>View Intel</span>
+                                                <span>{dictionary.MapsPage?.view_intel || 'View Intel'}</span>
                                                 <ArrowRight className="w-3 h-3 ml-2 transition-transform group-hover:translate-x-1" />
                                             </div>
                                         </div>

@@ -208,6 +208,20 @@
             "doc": "文档"
         }
     },
+    "MapsPage": {
+        "title_prefix": "地图",
+        "title_highlight": "攻略",
+        "subtitle": "// 卫星图像已授权",
+        "description": "详细图表、撤离点位置以及高价值目标区域。",
+        "view_intel": "查看攻略",
+        "metadata": {
+            "type": "类型:",
+            "released": "发布日期:",
+            "prev_intel": "< 上一份攻略",
+            "next_intel": "下一份攻略 >",
+            "end_of_file": "// 文件结束"
+        }
+    },
     "GuidesPage": {
         "title_prefix": "战地",
         "title_highlight": "手册",
@@ -221,6 +235,7 @@
         "Mechanics": "机制详解",
         "Tactical Utilities": "战术工具",
         "Tactical Maps": "战术地图",
+        "Maps Guides": "地图攻略",
         "Classified Mods": "机密模组",
         "Experiment": "实验性内容"
     }

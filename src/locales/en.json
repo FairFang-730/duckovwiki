@@ -208,6 +208,20 @@
             "doc": "DOC"
         }
     },
+    "MapsPage": {
+        "title_prefix": "Tactical",
+        "title_highlight": "Maps",
+        "subtitle": "// SATELLITE_IMAGERY_AUTHORIZED",
+        "description": "Detailed charts, extraction points, and high-value target locations.",
+        "view_intel": "View Intel",
+        "metadata": {
+            "type": "TYPE:",
+            "released": "RELEASED:",
+            "prev_intel": "< PREVIOUS_INTEL",
+            "next_intel": "NEXT_INTEL >",
+            "end_of_file": "// END_OF_FILE"
+        }
+    },
     "GuidesPage": {
         "title_prefix": "Field",
         "title_highlight": "Manuals",
@@ -221,6 +235,7 @@
         "Mechanics": "Mechanics",
         "Tactical Utilities": "Tactical Utilities",
         "Tactical Maps": "Tactical Maps",
+        "Maps Guides": "Maps Guides",
         "Classified Mods": "Classified Mods"
     }
 }

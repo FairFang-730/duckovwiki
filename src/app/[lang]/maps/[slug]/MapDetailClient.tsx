@@ -7,15 +7,18 @@ import { MDXRemote } from 'next-mdx-remote';
 import { WeaponTable } from '@/components/mdx/WeaponTable';
 import { TableOfContents } from "@/components/mdx/TableOfContents";
 
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface MapDetailClientProps {
     lang: Locale;
     map: Article;
     prevArticle?: { title: string; slug: string } | null;
     nextArticle?: { title: string; slug: string } | null;
+    dictionary: any;
     children?: React.ReactNode;
 }
 
-export default function MapDetailClient({ map, lang, prevArticle, nextArticle, children }: MapDetailClientProps) {
+export default function MapDetailClient({ map, lang, prevArticle, nextArticle, dictionary, children }: MapDetailClientProps) {
     // Legacy hydrated components are no longer needed as rendering happens on server
 
     return (
@@ -42,11 +45,11 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle, c
 
                             <div className="flex flex-wrap items-center gap-6 mb-8 font-mono text-sm border-l-2 border-yellow-500 pl-4">
                                 <div className="flex items-center text-neutral-500">
-                                    <span className="mr-2">TYPE:</span>
+                                    <span className="mr-2">{dictionary.MapsPage?.metadata?.type || 'TYPE:'}</span>
                                     <span className="text-neutral-300 uppercase">{map.subcategory || 'TACTICAL'}</span>
                                 </div>
                                 <div className="flex items-center text-neutral-500">
-                                    <span className="mr-2">RELEASED:</span>
+                                    <span className="mr-2">{dictionary.MapsPage?.metadata?.released || 'RELEASED:'}</span>
                                     <span className="text-neutral-300">{map.date}</span>
                                 </div>
                             </div>
@@ -79,7 +82,7 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle, c
                                     className="group flex flex-col items-start p-4 rounded-lg border border-white/5 hover:border-yellow-500/50 bg-neutral-900/30 transition-all text-left"
                                 >
                                     <span className="text-xs text-neutral-500 font-mono mb-2 group-hover:text-yellow-500">
-                                        {'< PREVIOUS_INTEL'}
+                                        {dictionary.MapsPage?.metadata?.prev_intel || '< PREVIOUS_INTEL'}
                                     </span>
                                     <span className="text-white font-bold group-hover:text-yellow-500 transition-colors">
                                         {prevArticle.title}
@@ -93,7 +96,7 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle, c
                                     className="group flex flex-col items-end p-4 rounded-lg border border-white/5 hover:border-yellow-500/50 bg-neutral-900/30 transition-all text-right"
                                 >
                                     <span className="text-xs text-neutral-500 font-mono mb-2 group-hover:text-yellow-500">
-                                        {'NEXT_INTEL >'}
+                                        {dictionary.MapsPage?.metadata?.next_intel || 'NEXT_INTEL >'}
                                     </span>
                                     <span className="text-white font-bold group-hover:text-yellow-500 transition-colors">
                                         {nextArticle.title}
@@ -103,7 +106,7 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle, c
                         </div>
 
                         <div className="mt-8 pt-8 border-t border-white/5 font-mono text-xs text-neutral-600">
-                            {`// END_OF_FILE`}
+                            {dictionary.MapsPage?.metadata?.end_of_file || '// END_OF_FILE'}
                         </div>
                     </div>
 
