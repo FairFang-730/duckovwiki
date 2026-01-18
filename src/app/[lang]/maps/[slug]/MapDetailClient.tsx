@@ -43,15 +43,22 @@ export default function MapDetailClient({ map, lang, prevArticle, nextArticle, d
                                 {map.title}
                             </h1>
 
-                            <div className="flex flex-wrap items-center gap-6 mb-8 font-mono text-sm border-l-2 border-yellow-500 pl-4">
+                            <div className="flex flex-wrap items-center gap-6 mb-4 font-mono text-sm border-l-2 border-yellow-500 pl-4">
+                                {map.category && (
+                                    <span className="bg-yellow-500/10 text-yellow-500 px-2 py-1 rounded border border-yellow-500/20 text-xs font-bold">
+                                        {map.category.toUpperCase()}
+                                    </span>
+                                )}
                                 <div className="flex items-center text-neutral-500">
-                                    <span className="mr-2">{dictionary.MapsPage?.metadata?.type || 'TYPE:'}</span>
-                                    <span className="text-neutral-300 uppercase">{map.subcategory || 'TACTICAL'}</span>
-                                </div>
-                                <div className="flex items-center text-neutral-500">
-                                    <span className="mr-2">{dictionary.MapsPage?.metadata?.released || 'RELEASED:'}</span>
+                                    <span className="mr-2">RELEASED:</span>
                                     <span className="text-neutral-300">{map.date}</span>
                                 </div>
+                                {map.readTime && (
+                                    <div className="flex items-center text-neutral-500">
+                                        <span className="mr-2">INTEL_READ_TIME:</span>
+                                        <span className="text-neutral-300">{map.readTime}</span>
+                                    </div>
+                                )}
                             </div>
 
                             <p className="text-xl text-neutral-400 leading-relaxed font-light">
