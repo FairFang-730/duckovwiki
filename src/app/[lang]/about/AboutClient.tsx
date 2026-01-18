@@ -56,7 +56,6 @@ export default function AboutClient({ lang, dict }: { lang: Locale, dict: Dictio
 
                     <div className="bg-black border border-neutral-800 p-4 font-mono text-sm text-neutral-500 mt-8">
                         <p className="mb-1">{t.version_tag}</p>
-                        <p className="mb-1">{t.maintainer_tag}</p>
                         <p>{t.server_tag} <span className="text-green-500">{dict.Common.status_online}</span></p>
                     </div>
                 </article>
