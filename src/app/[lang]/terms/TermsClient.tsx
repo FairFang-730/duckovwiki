@@ -118,13 +118,6 @@ export default function TermsClient({ lang, dict }: { lang: Locale, dict: Dictio
                             <p>{t.p14}</p>
                         </>
                     )}
-                    {/* @ts-ignore */}
-                    {t.h15 && (
-                        <>
-                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h15}</h2>
-                            <p>{t.p15}</p>
-                        </>
-                    )}
 
                     <div className="mt-8 border-t border-neutral-800 pt-8 text-xs text-neutral-600">
                         <p>{t.footer_law}</p>

@@ -111,17 +111,10 @@ export default function PrivacyClient({ lang, dict }: { lang: Locale, dict: Dict
                         </>
                     )}
                     {/* @ts-ignore */}
-                    {t.h14 && (
+                    {t.h13 && (
                         <>
-                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h14}</h2>
-                            <p>{t.p14}</p>
-                        </>
-                    )}
-                    {/* @ts-ignore */}
-                    {t.h15 && (
-                        <>
-                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h15}</h2>
-                            <p>{t.p15}</p>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h13}</h2>
+                            <p>{t.p13}</p>
                         </>
                     )}
 
