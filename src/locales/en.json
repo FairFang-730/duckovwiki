@@ -71,9 +71,9 @@
         "FAQ": {
             "title": "Field Manual Q&A",
             "q1": "Is Escape From Duckov multiplayer or PVP?",
-            "a1": "No. The game is strictly a single-player PVE extraction shooter. You fight against AI enemies (Hostile Ducks), not real players. While unofficial co-op mods exist on the Steam Workshop, the core game is designed for solo progression.",
+            "a1": "No. Escape From Duckov is strictly a single-player PVE extraction shooter. You fight against AI enemies (Hostile Ducks), not real players. While unofficial co-op mods exist on the Steam Workshop, the core game is designed for solo progression.",
             "q2": "Does the game have native controller support?",
-            "a2": "Not officially. As of Patch v1.3.12, Duckov does not have native controller support. However, it is rated \"Playable\" on Steam Deck by using community layouts (Steam Input) to map WASD controls to joysticks.",
+            "a2": "Not officially. As of Patch v1.3.12, Escape From Duckov does not have native controller support. However, it is rated \"Playable\" on Steam Deck by using community layouts (Steam Input) to map WASD controls to joysticks.",
             "q3": "Where is the save file location?",
             "a3": "Your save data is located at: %AppData%\\LocalLow\\TeamSoda\\Duckov\\Saves. Tip: The game has a built-in \"Restore Backup\" feature in the main menu if your save gets corrupted.",
             "q4": "What happens when I die?",
@@ -82,7 +82,7 @@
             "a5": "This is a known issue with older GPU drivers. Please update your drivers or verify the integrity of game files via Steam. If the issue persists, try disabling \"Rim Light\" in the graphics settings."
         },
         "MissionBriefing": {
-            "header": "SYSTEM_LOG // DUCKOV_INTELLIGENCE_DATABASE_V1.3",
+            "header": "SYSTEM_LOG // ESCAPE_FROM_DUCKOV_INTELLIGENCE_DATABASE_V1.3.12",
             "p1": "// TARGET DESIGNATION: ESCAPE FROM DUCKOV This database is dedicated to Escape From Duckov, the top-down PVE extraction shooter developed by Team Soda. Unlike traditional FPS titles, this indie gem combines tactical survival mechanics with Roguelite progression. Players assume the role of an Average Duck, tasked with scavenging dynamic maps like Ground Zero, The Slums, and Chemical Plant. The operational loop involves managing hydration, sanity, and inventory space while evading hostile AI ducks to secure a safe extraction.",
             "p2": "// TACTICAL_ASSETS & UTILITY DuckovWiki is the premier Unofficial Field Manual designed to reduce the learning curve. Our archive includes: 1. Interactive Maps: Pinpointing all hidden Stashes, Blueprints, and Extraction Points. 2. Armory Data: Detailed stats for 50+ weapons, including Ammo Damage Charts and Recoil Control builds. 3. Hideout Planner: A complete calculator for Workbench upgrades, tracking required materials like Scrap Metal, Circuit Boards, and Duct Tape. 4. Quest Log: Step-by-step walkthroughs for NPC missions from Jeff the Duck, including key locations and item requirements.",
             "p3": "// OPERATIONAL_STATUS Whether you are optimizing your Steam Deck layout or looking for the best Solo Farming Routes, this site is updated daily. All intel is verified for Steam Early Access (Patch v1.3.12). We strictly support legitimate single-player progression and do not condone cheats.",
