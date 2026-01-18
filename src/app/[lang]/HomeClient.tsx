@@ -19,9 +19,10 @@ interface Article {
     date: string;
     description?: string;
     image?: string;
+    type: string;
 }
 
-export default function HomeClient({ dict, lang, latestGuides }: { dict: Dictionary, lang: Locale, latestGuides: Article[] }) {
+export default function HomeClient({ dict, lang, latestContent }: { dict: Dictionary, lang: Locale, latestContent: Article[] }) {
     const locale = lang;
     const t = dict.Home;
     const router = useRouter();
@@ -71,7 +72,7 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                         </form>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                         <Link
                             href={`/${locale}/guides`}
                             className="px-8 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg transition-transform active:scale-95 shadow-[0_4px_14px_0_rgba(234,179,8,0.39)] text-sm"
@@ -84,6 +85,20 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                         >
                             {t.Hero.cta_secondary}
                         </Link>
+                    </div>
+
+                    <div>
+                        <a
+                            href="https://store.steampowered.com/app/3167020/Escape_From_Duckov/"
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="inline-flex items-center gap-2 px-6 py-2 bg-[#171a21] hover:bg-[#2a475e] text-[#c7d5e0] font-bold rounded-lg transition-all border border-white/10 hover:border-[#66c0f4] hover:shadow-[0_0_15px_rgba(102,192,244,0.3)] text-sm"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                                <path d="M11.979 0C5.666 0 .548 5.135.548 11.472c0 2.923 1.096 5.6 2.912 7.64l.056.059 4.314-1.78a2.951 2.951 0 01-.06-.554c0-1.637 1.328-2.964 2.965-2.964s2.964 1.327 2.964 2.964c0 1.638-1.328 2.965-2.964 2.965a2.95 2.95 0 01-1.666-.516l-3.266 4.093a11.408 11.408 0 006.176 1.849c6.314 0 11.432-5.135 11.432-11.472S18.293 0 11.979 0zM7.34 16.03c.89 0 1.611.724 1.611 1.617 0 .894-.721 1.618-1.611 1.618-.89 0-1.612-.724-1.612-1.618 0-.893.722-1.617 1.612-1.617zm.582 1.487c-.672.483-1.604.321-2.085-.353-.48-.675-.32-1.61.352-2.094.672-.483 1.603-.321 2.084.354.481.674.321 1.61-.351 2.093z" />
+                            </svg>
+                            <span>Play on Steam</span>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -215,20 +230,17 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                 <div className="flex items-center justify-between mb-8">
                     <h2 className="text-2xl font-bold text-white tracking-tight">{t.LatestOps.title}</h2>
                     <div className="h-px bg-zinc-800 flex-grow ml-6"></div>
-                    <Link href={`/${locale}/guides`} className="ml-6 text-sm font-medium text-yellow-500 hover:text-yellow-400 transition-colors hidden sm:block">
-                        View All
-                    </Link>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {latestGuides.length > 0 ? (
-                        latestGuides.slice(0, 3).map((guide, idx) => (
-                            <Link href={`/${locale}/guides/${guide.slug}`} key={idx} className="group cursor-pointer block">
+                    {latestContent.length > 0 ? (
+                        latestContent.map((item, idx) => (
+                            <Link href={`/${locale}/${item.type}/${item.slug}`} key={idx} className="group cursor-pointer block">
                                 <article className="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-zinc-600 transition-all hover:shadow-2xl">
                                     <div className="aspect-video bg-zinc-800 relative overflow-hidden">
-                                        {guide.image ? (
+                                        {item.image ? (
                                             <img
-                                                src={guide.image}
-                                                alt={guide.title}
+                                                src={item.image}
+                                                alt={item.title}
                                                 className="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                                             />
                                         ) : (
@@ -239,11 +251,11 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                                     </div>
                                     <div className="p-5">
                                         <div className="flex items-center gap-2 mb-3 text-xs text-zinc-500 font-mono">
-                                            <span className="bg-zinc-800 px-2 py-1 rounded">Guide</span>
-                                            <time dateTime={guide.date} className="text-zinc-600">{new Date(guide.date).toLocaleDateString()}</time>
+                                            <span className="bg-zinc-800 px-2 py-1 rounded capitalize">{item.type.slice(0, -1)}</span>
+                                            <time dateTime={item.date} className="text-zinc-600">{new Date(item.date).toLocaleDateString()}</time>
                                         </div>
                                         <h3 className="text-white font-bold text-lg leading-snug group-hover:text-yellow-500 transition-colors line-clamp-2">
-                                            {guide.title}
+                                            {item.title}
                                         </h3>
                                     </div>
                                 </article>

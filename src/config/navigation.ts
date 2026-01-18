@@ -7,7 +7,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
     { labelKey: 'guides', href: '/guides' },
-    // { labelKey: 'maps', href: '/maps' },
+    { labelKey: 'maps', href: '/maps' },
     // { labelKey: 'mods', href: '/mods' }, // Mapped 'loadouts' to 'meta' key based on original code
     // { labelKey: 'tools', href: '/tools' },
 ];
