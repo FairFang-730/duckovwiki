@@ -9,13 +9,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = siteConfig.url
     // const locales = ['en', 'zh'] // Removed, imported from lib/i18n
 
-    // Static Routes
-    const routes = [
-        '',
+    // 1. Hub Pages (High Priority, frequently updated with new content)
+    const hubRoutes = [
         '/maps',
         '/mods',
         '/tools',
         '/guides',
+    ]
+
+    // 2. Info & Legal Pages (Low Priority, rarely changed)
+    const infoRoutes = [
         '/about',
         '/contact',
         '/privacy',
@@ -27,57 +30,76 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Generate for all locales
     for (const locale of locales) {
-        // 1. Static Pages
-        for (const route of routes) {
+        // A. Home Page (Highest Priority)
+        sitemapEntries.push({
+            url: `${baseUrl}/${locale}`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 1.0,
+        })
+
+        // B. Hub Pages
+        for (const route of hubRoutes) {
             sitemapEntries.push({
                 url: `${baseUrl}/${locale}${route}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: route === '' ? 1 : 0.8,
+                changeFrequency: 'daily',
+                priority: 0.9,
             })
         }
 
-        // 2. Dynamic Articles (Guides)
+        // C. Info Pages
+        for (const route of infoRoutes) {
+            sitemapEntries.push({
+                url: `${baseUrl}/${locale}${route}`,
+                lastModified: new Date(), // Could be specific date if tracked, but build date is safe fallback
+                changeFrequency: 'monthly',
+                priority: 0.3,
+            })
+        }
+
+        // D. Dynamic Articles (High Priority Content)
+        // Guides
         const guides = await getAllArticles(locale, 'guides')
         for (const guide of guides) {
             sitemapEntries.push({
                 url: `${baseUrl}/${locale}/guides/${guide.slug}`,
                 lastModified: new Date(guide.date),
-                changeFrequency: 'monthly',
-                priority: 0.7,
+                changeFrequency: 'weekly',
+                priority: 0.8,
             })
         }
 
-        // 3. Dynamic Articles (Maps)
+        // Maps
         const maps = await getAllArticles(locale, 'maps')
         for (const map of maps) {
             sitemapEntries.push({
                 url: `${baseUrl}/${locale}/maps/${map.slug}`,
                 lastModified: new Date(),
-                changeFrequency: 'monthly',
-                priority: 0.7,
+                changeFrequency: 'weekly',
+                priority: 0.8,
             })
         }
 
-        // 4. Dynamic Articles (Mods)
+        // Mods
         const mods = await getAllArticles(locale, 'mods')
         for (const mod of mods) {
             sitemapEntries.push({
                 url: `${baseUrl}/${locale}/mods/${mod.slug}`,
                 lastModified: new Date(),
-                changeFrequency: 'monthly',
-                priority: 0.7,
+                changeFrequency: 'weekly',
+                priority: 0.8,
             })
         }
 
-        // 5. Dynamic Articles (Tools)
+        // Tools
         const tools = await getAllArticles(locale, 'tools')
         for (const tool of tools) {
             sitemapEntries.push({
                 url: `${baseUrl}/${locale}/tools/${tool.slug}`,
                 lastModified: new Date(),
-                changeFrequency: 'monthly',
-                priority: 0.7,
+                changeFrequency: 'weekly',
+                priority: 0.8,
             })
         }
     }
