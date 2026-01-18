@@ -23,7 +23,7 @@ export default function AboutClient({ lang, dict }: { lang: Locale, dict: Dictio
                     <header className="mb-12 border-b border-neutral-800 pb-8">
                         <div className="text-yellow-500 font-mono text-sm mb-2 uppercase tracking-widest">{t.eyebrow}</div>
                         <h1 className="text-4xl font-bold text-white mb-4">{t.title}</h1>
-                        <p className="lead text-xl text-neutral-400">
+                        <p className="text-sm text-neutral-400">
                             {t.intro}
                         </p>
                     </header>
@@ -49,8 +49,7 @@ export default function AboutClient({ lang, dict }: { lang: Locale, dict: Dictio
                         </div>
                     </div>
 
-                    <h2>{t.status_title}</h2>
-                    <p>
+                    <p className="text-sm text-neutral-400">
                         {t.status_desc}
                     </p>
 
