@@ -276,7 +276,7 @@ export default function HomeClient({ dict, lang, latestGuides }: { dict: Diction
                                     <ChevronDown className="w-5 h-5" />
                                 </span>
                             </summary>
-                            <div className="text-zinc-400 px-6 pb-6 leading-relaxed text-base border-t border-zinc-800/50 pt-4 mt-2">
+                            <div className="text-zinc-400 px-6 pb-6 leading-relaxed text-base border-t border-zinc-800/50 pt-4 mt-2 break-all">
                                 {item.a}
                             </div>
                         </details>

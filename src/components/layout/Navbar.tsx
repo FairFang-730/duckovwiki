@@ -77,11 +77,26 @@ export default function Navbar({ dict, lang }: { dict: Dictionary, lang: string 
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center gap-4">
-                        {/* Mobile Language Switcher (Compact) */}
-                        <div className="flex items-center gap-1">
-                            <Link href={switchLang('en')} className={`text-xs ${lang === 'en' ? 'text-yellow-500' : 'text-neutral-500'}`}>EN</Link>
-                            <span className="text-neutral-700">/</span>
-                            <Link href={switchLang('zh')} className={`text-xs ${lang === 'zh' ? 'text-yellow-500' : 'text-neutral-500'}`}>中</Link>
+                        {/* Mobile Language Switcher (Button Group) */}
+                        <div className="flex items-center bg-neutral-800 rounded-lg p-0.5 border border-neutral-700/50">
+                            <Link
+                                href={switchLang('en')}
+                                className={`px-2.5 py-1 rounded-md text-[10px] font-bold transition-all ${lang === 'en'
+                                    ? 'bg-neutral-700 text-white shadow-sm'
+                                    : 'text-neutral-400 hover:text-white'
+                                    }`}
+                            >
+                                EN
+                            </Link>
+                            <Link
+                                href={switchLang('zh')}
+                                className={`px-2.5 py-1 rounded-md text-[10px] font-bold transition-all ${lang === 'zh'
+                                    ? 'bg-yellow-500 text-black shadow-sm'
+                                    : 'text-neutral-400 hover:text-white'
+                                    }`}
+                            >
+                                中
+                            </Link>
                         </div>
 
                         <button

@@ -17,13 +17,18 @@ export default function Footer({ dict, lang }: { dict: Dictionary, lang: string 
     );
 
     return (
-        <footer className="border-t border-neutral-900 bg-neutral-950 py-8 text-center text-sm font-sans">
-            <div className="container mx-auto px-4">
+        <footer className="border-t border-neutral-900 bg-neutral-950 py-12 text-center text-sm font-sans">
+            <div className="container mx-auto px-4 flex flex-col items-center">
 
-                {/* --- Tier 1: Site Nav & Community (SEO & UX High Priority) --- */}
-                <div className="mb-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 font-medium text-neutral-400 text-sm">
+                {/* --- Logo (Top) --- */}
+                <div className="mb-8">
+                    <Link href={`/${lang}`} className="text-white font-bold text-2xl tracking-tighter">
+                        Duckov<span className="text-yellow-500">Wiki</span>
+                    </Link>
+                </div>
 
-                    {/* Internal Links - Hover Brand Yellow */}
+                {/* --- Tier 1: Site Nav & Community --- */}
+                <div className="mb-6 flex flex-wrap justify-center items-center gap-x-8 gap-y-4 font-medium text-neutral-400">
                     <Link href={`/${lang}/about`} className="hover:text-yellow-500 transition-colors duration-200">
                         {dict.Footer.about}
                     </Link>
@@ -35,8 +40,6 @@ export default function Footer({ dict, lang }: { dict: Dictionary, lang: string 
                     </Link>
 
                     {/* External Community Links */}
-
-                    {/* Bilibili */}
                     <a
                         href="https://space.bilibili.com/3546815985092830"
                         target="_blank"
@@ -46,8 +49,6 @@ export default function Footer({ dict, lang }: { dict: Dictionary, lang: string 
                         <span className="group-hover:animate-bounce">{BilibiliIcon}</span>
                         <span>{dict.Footer.bilibili_label}</span>
                     </a>
-
-                    {/* Steam */}
                     <a
                         href="https://store.steampowered.com/app/3167020/Escape_From_Duckov/"
                         target="_blank"
@@ -60,33 +61,33 @@ export default function Footer({ dict, lang }: { dict: Dictionary, lang: string 
                 </div>
 
                 {/* --- Separator --- */}
-                <div className="mx-auto mb-6 h-px w-12 bg-neutral-800"></div>
+                <div className="w-12 h-px bg-neutral-800 mb-8"></div>
 
-                {/* --- Tier 2: Legal (AdSense Compliance) --- */}
-                {/* Smaller font, lighter color */}
-                <div className="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-neutral-500">
+                {/* --- Tier 2: Legal --- */}
+                <div className="mb-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-neutral-500">
                     <Link href={`/${lang}/privacy`} className="hover:text-neutral-300 transition-colors">
                         {dict.Footer.privacy}
                     </Link>
-                    <span className="text-neutral-800">•</span>
+                    <span className="hidden sm:inline text-neutral-800">•</span>
                     <Link href={`/${lang}/terms`} className="hover:text-neutral-300 transition-colors">
                         {dict.Footer.terms}
                     </Link>
-                    <span className="text-neutral-800">•</span>
+                    <span className="hidden sm:inline text-neutral-800">•</span>
                     <Link href={`/${lang}/disclaimer`} className="hover:text-neutral-300 transition-colors">
                         {dict.Footer.disclaimer}
                     </Link>
                 </div>
 
-                {/* --- Tier 3: Copyright & Attribution --- */}
-                <div className="space-y-1 text-xs text-neutral-600 leading-relaxed">
+                {/* --- Tier 3: Copyright (Mobile Block Layout) --- */}
+                <div className="flex flex-col gap-y-3 text-xs text-neutral-600 leading-relaxed max-w-lg">
                     <p>
                         © 2026 DuckovWiki. <span className="text-neutral-500">{dict.Footer.copyright_suffix}</span>
                     </p>
                     <p>
                         {dict.Footer.assets_declaration} <strong className="text-neutral-500 font-medium">Team Soda</strong>.
-                        <br className="hidden sm:inline" />
-                        <span className="sm:ml-1">{dict.Footer.affiliation}</span>
+                    </p>
+                    <p>
+                        {dict.Footer.affiliation}
                     </p>
                 </div>
 
