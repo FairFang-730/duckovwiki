@@ -29,7 +29,8 @@
             "h2": "Master the PVE world. Interactive Maps, Hideout Building, and Weapon Mods. Updated for Patch v1.3.12.",
             "search_placeholder": "Warehouse Loot Route, Big Boy Boss, Circuit Board...",
             "cta_primary": "START SCAVENGING",
-            "cta_secondary": "VIEW BLUEPRINTS"
+            "cta_secondary": "VIEW BLUEPRINTS",
+            "play_steam_btn": "Play on Steam"
         },
         "TrustBar": {
             "patch_label": "CURRENT PATCH:",

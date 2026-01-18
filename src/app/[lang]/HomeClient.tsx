@@ -97,7 +97,7 @@ export default function HomeClient({ dict, lang, latestContent }: { dict: Dictio
                             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                                 <path d="M11.979 0C5.666 0 .548 5.135.548 11.472c0 2.923 1.096 5.6 2.912 7.64l.056.059 4.314-1.78a2.951 2.951 0 01-.06-.554c0-1.637 1.328-2.964 2.965-2.964s2.964 1.327 2.964 2.964c0 1.638-1.328 2.965-2.964 2.965a2.95 2.95 0 01-1.666-.516l-3.266 4.093a11.408 11.408 0 006.176 1.849c6.314 0 11.432-5.135 11.432-11.472S18.293 0 11.979 0zM7.34 16.03c.89 0 1.611.724 1.611 1.617 0 .894-.721 1.618-1.611 1.618-.89 0-1.612-.724-1.612-1.618 0-.893.722-1.617 1.612-1.617zm.582 1.487c-.672.483-1.604.321-2.085-.353-.48-.675-.32-1.61.352-2.094.672-.483 1.603-.321 2.084.354.481.674.321 1.61-.351 2.093z" />
                             </svg>
-                            <span>Play on Steam</span>
+                            <span>{t.Hero.play_steam_btn}</span>
                         </a>
                     </div>
                 </div>
@@ -251,7 +251,8 @@ export default function HomeClient({ dict, lang, latestContent }: { dict: Dictio
                                     </div>
                                     <div className="p-5">
                                         <div className="flex items-center gap-2 mb-3 text-xs text-zinc-500 font-mono">
-                                            <span className="bg-zinc-800 px-2 py-1 rounded capitalize">{item.type.slice(0, -1)}</span>
+                                            {/* @ts-ignore */}
+                                            <span className="bg-zinc-800 px-2 py-1 rounded capitalize">{dict.Search.types[item.type] || item.type}</span>
                                             <time dateTime={item.date} className="text-zinc-600">{new Date(item.date).toLocaleDateString()}</time>
                                         </div>
                                         <h3 className="text-white font-bold text-lg leading-snug group-hover:text-yellow-500 transition-colors line-clamp-2">

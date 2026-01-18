@@ -29,7 +29,8 @@
             "h2": "主宰 PVE 世界。互动地图、藏身处建设与武器改装。已适配最新版本 v1.3.12。",
             "search_placeholder": "仓库搜刮路线、大壮 Boss、电路板、杰夫鸭的任务...",
             "cta_primary": "开始搜刮",
-            "cta_secondary": "查看蓝图"
+            "cta_secondary": "查看蓝图",
+            "play_steam_btn": "在 Steam 上玩"
         },
         "TrustBar": {
             "patch_label": "当前版本：",
