@@ -1,0 +1,34 @@
+{
+    "example-tool-features": {
+        "columns": [
+            {
+                "key": "feature",
+                "label": {
+                    "en": "Feature",
+                    "zh": "功能"
+                },
+                "width": "w-1/2"
+            },
+            {
+                "key": "description",
+                "label": {
+                    "en": "Description",
+                    "zh": "描述"
+                },
+                "width": "w-1/2"
+            }
+        ],
+        "rows": [
+            {
+                "feature": {
+                    "en": "DPS Calculator",
+                    "zh": "DPS 计算器"
+                },
+                "description": {
+                    "en": "Calculates damage per second based on ammo type.",
+                    "zh": "基于弹药类型计算每秒伤害。"
+                }
+            }
+        ]
+    }
+}

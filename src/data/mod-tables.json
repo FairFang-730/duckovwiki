@@ -1,0 +1,44 @@
+{
+    "example-mod-stats": {
+        "columns": [
+            {
+                "key": "stat",
+                "label": {
+                    "en": "Statistic",
+                    "zh": "属性"
+                },
+                "width": "w-1/2"
+            },
+            {
+                "key": "value",
+                "label": {
+                    "en": "Value",
+                    "zh": "数值"
+                },
+                "width": "w-1/2"
+            }
+        ],
+        "rows": [
+            {
+                "stat": {
+                    "en": "Recoil Control",
+                    "zh": "后坐力控制"
+                },
+                "value": {
+                    "en": "+5%",
+                    "zh": "+5%"
+                }
+            },
+            {
+                "stat": {
+                    "en": "Ergonomics",
+                    "zh": "人机工学"
+                },
+                "value": {
+                    "en": "-2",
+                    "zh": "-2"
+                }
+            }
+        ]
+    }
+}

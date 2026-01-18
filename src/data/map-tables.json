@@ -1,0 +1,112 @@
+{
+    "warehouse-extractions": {
+        "columns": [
+            {
+                "key": "name",
+                "label": {
+                    "en": "Extraction Name",
+                    "zh": "撤离点名称"
+                },
+                "width": "w-1/4"
+            },
+            {
+                "key": "location",
+                "label": {
+                    "en": "Location",
+                    "zh": "位置"
+                },
+                "width": "w-1/4"
+            },
+            {
+                "key": "condition",
+                "label": {
+                    "en": "Requirement",
+                    "zh": "开启条件/要求"
+                },
+                "width": "w-1/3"
+            },
+            {
+                "key": "danger",
+                "label": {
+                    "en": "Danger Level",
+                    "zh": "危险等级"
+                },
+                "width": "w-auto"
+            }
+        ],
+        "rows": [
+            {
+                "name": {
+                    "en": "<strong>Main Gate</strong>",
+                    "zh": "<strong>南门 (Main Gate)</strong>"
+                },
+                "location": {
+                    "en": "South Side",
+                    "zh": "地图南侧"
+                },
+                "condition": {
+                    "en": "Activate Power Switch in Office",
+                    "zh": "需在二楼办公室激活电源开关"
+                },
+                "danger": {
+                    "en": "<span class='text-red-500 font-bold'>High</span>",
+                    "zh": "<span class='text-red-500 font-bold'>高</span>"
+                }
+            },
+            {
+                "name": {
+                    "en": "<strong>Sewer Tunnel</strong>",
+                    "zh": "<strong>地下水道 (Sewer Tunnel)</strong>"
+                },
+                "location": {
+                    "en": "North Basement",
+                    "zh": "北侧地下室"
+                },
+                "condition": {
+                    "en": "No Backpack Equipped",
+                    "zh": "<strong>严禁携带背包</strong>"
+                },
+                "danger": {
+                    "en": "<span class='text-green-500 font-bold'>Low</span>",
+                    "zh": "<span class='text-green-500 font-bold'>低</span>"
+                }
+            },
+            {
+                "name": {
+                    "en": "<strong>Roof Helipad</strong>",
+                    "zh": "<strong>屋顶停机坪</strong>"
+                },
+                "location": {
+                    "en": "Roof (Central)",
+                    "zh": "中央屋顶"
+                },
+                "condition": {
+                    "en": "<strong>Red Flare</strong> & 6000 Credits",
+                    "zh": "需要 <strong>红色信号弹</strong> & 6000金币"
+                },
+                "danger": {
+                    "en": "<span class='text-purple-500 font-bold'>Extreme</span>",
+                    "zh": "<span class='text-purple-500 font-bold'>极高</span>"
+                }
+            },
+            {
+                "name": {
+                    "en": "<strong>Cargo Boat</strong>",
+                    "zh": "<strong>货运船</strong>"
+                },
+                "location": {
+                    "en": "East Docks",
+                    "zh": "东侧码头"
+                },
+                "condition": {
+                    "en": "Once per raid (Random)",
+                    "zh": "每局随机开放 (一次性)"
+                },
+                "danger": {
+                    "en": "<span class='text-yellow-500 font-bold'>Medium</span>",
+                    "zh": "<span class='text-yellow-500 font-bold'>中</span>"
+                }
+            }
+        ]
+    }
+}

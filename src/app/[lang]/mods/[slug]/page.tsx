@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { locales } from "@/config/i18n";
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { WeaponTable } from '@/components/mdx/WeaponTable';
+import { ModTable } from '@/components/mdx/ModTable';
 
 export async function generateStaticParams() {
     const params = [];
@@ -79,6 +80,7 @@ export default async function ModDetailPage({ params }: { params: Promise<{ slug
     // We must define components here to pass them to MDXRemote
     const components = {
         WeaponTable: (props: any) => <WeaponTable {...props} lang={locale} />,
+        ModTable: (props: any) => <ModTable {...props} lang={locale} />,
         h2: (props: any) => <h2 {...props} className="text-xl font-bold text-white mt-8 mb-4 flex items-center gap-2 after:content-[''] after:h-px after:flex-1 after:bg-white/10" />,
         h3: (props: any) => <h3 {...props} className="text-lg font-bold text-white mt-6 mb-3" />,
         img: (props: any) => (
