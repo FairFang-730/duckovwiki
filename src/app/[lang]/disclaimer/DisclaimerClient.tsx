@@ -47,6 +47,28 @@ export default function DisclaimerClient({ lang, dict }: { lang: Locale, dict: D
                     <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h4}</h2>
                     <p>{t.p4}</p>
 
+                    {/* @ts-ignore */}
+                    {t.h5 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h5}</h2>
+                            <p>{t.p5}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h6 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h6}</h2>
+                            <p>{t.p6}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h7 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h7}</h2>
+                            <p>{t.p7}</p>
+                        </>
+                    )}
+
                     <div className="mt-8 border-t border-neutral-800 pt-8 text-xs text-neutral-600">
                         <p>{t.footer_law}</p>
                         <p>{t.footer_contact} <a href="mailto:admin@duckovwiki.fun" className="text-yellow-500 hover:text-yellow-400">admin@duckovwiki.fun</a></p>

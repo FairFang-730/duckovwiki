@@ -35,25 +35,95 @@ export default function PrivacyClient({ lang, dict }: { lang: Locale, dict: Dict
                     </header>
 
                     <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h1}</h2>
-                    <p>
-                        {t.p1}
-                    </p>
+                    <p>{t.p1}</p>
 
                     <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h2}</h2>
-                    <p>
-                        {t.p2}
-                    </p>
+                    <p>{t.p2}</p>
 
                     <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h3}</h2>
-                    <p>
-                        <strong>{t.p3_essential}</strong> {t.p3_essential_desc}<br />
-                        <strong>{t.p3_analytics}</strong> {t.p3_analytics_desc}
-                    </p>
+                    <p>{t.p3}</p>
 
                     <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h4}</h2>
-                    <p>
-                        {t.p4}
-                    </p>
+                    <p>{t.p4}</p>
+
+                    {/* @ts-ignore */}
+                    {t.h5 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h5}</h2>
+                            <p>{t.p5}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h6 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h6}</h2>
+                            <p>{t.p6}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h7 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h7}</h2>
+                            <p>{t.p7}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h8 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h8}</h2>
+                            <p>{t.p8}</p>
+                        </>
+                    )}
+
+                    {/* @ts-ignore */}
+                    {t.h9 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h9}</h2>
+                            <p>{t.p9}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h10 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h10}</h2>
+                            <p>{t.p10}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h11 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h11}</h2>
+                            <p>{t.p11}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h12 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h12}</h2>
+                            <p>{t.p12}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h13 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h13}</h2>
+                            <p>{t.p13}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h14 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h14}</h2>
+                            <p>{t.p14}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h15 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h15}</h2>
+                            <p>{t.p15}</p>
+                        </>
+                    )}
 
                     <div className="mt-12 p-6 bg-neutral-900 border border-neutral-800 rounded">
                         <h4 className="text-white mt-0">{t.contact_title}</h4>

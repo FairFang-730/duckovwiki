@@ -47,6 +47,85 @@ export default function TermsClient({ lang, dict }: { lang: Locale, dict: Dictio
                     <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h4}</h2>
                     <p>{t.p4}</p>
 
+                    {/* @ts-ignore - Dynamic fields from expanded dictionary */}
+                    {t.h5 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h5}</h2>
+                            <p>{t.p5}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h6 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h6}</h2>
+                            <p>{t.p6}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h7 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h7}</h2>
+                            <p>{t.p7}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h8 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h8}</h2>
+                            <p>{t.p8}</p>
+                        </>
+                    )}
+
+                    {/* @ts-ignore */}
+                    {t.h9 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h9}</h2>
+                            <p>{t.p9}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h10 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h10}</h2>
+                            <p>{t.p10}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h11 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h11}</h2>
+                            <p>{t.p11}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h12 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h12}</h2>
+                            <p>{t.p12}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h13 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h13}</h2>
+                            <p>{t.p13}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h14 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h14}</h2>
+                            <p>{t.p14}</p>
+                        </>
+                    )}
+                    {/* @ts-ignore */}
+                    {t.h15 && (
+                        <>
+                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h15}</h2>
+                            <p>{t.p15}</p>
+                        </>
+                    )}
+
                     <div className="mt-8 border-t border-neutral-800 pt-8 text-xs text-neutral-600">
                         <p>{t.footer_law}</p>
                         <p>{t.footer_contact} <a href="mailto:admin@duckovwiki.fun" className="text-yellow-500 hover:text-yellow-400">admin@duckovwiki.fun</a></p>
