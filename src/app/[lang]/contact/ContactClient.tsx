@@ -33,8 +33,7 @@ export default function ContactClient({ lang, dict }: { lang: Locale, dict: Dict
                     </p>
 
                     <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-8 mt-8 not-prose">
-                        <h2 className="text-xl font-bold text-white mb-4">{t.card_title}</h2>
-                        <p className="text-neutral-400 mb-6 max-w-2xl">
+                        <p className="text-neutral-400 mb-6">
                             {t.card_desc}
                         </p>
 
