@@ -109,18 +109,11 @@ export default function PrivacyClient({ lang, dict }: { lang: Locale, dict: Dict
                             <p>{t.p13}</p>
                         </>
                     )}
-                    {/* @ts-ignore */}
-                    {t.h13 && (
-                        <>
-                            <h2 className="text-xl font-bold text-white mt-8 mb-4">{t.h13}</h2>
-                            <p>{t.p13}</p>
-                        </>
-                    )}
 
                     <div className="mt-12 p-6 bg-neutral-900 border border-neutral-800 rounded">
                         <h4 className="text-white mt-0">{t.contact_title}</h4>
                         <p className="mb-0 text-sm">
-                            {t.contact_desc} <code>privacy@duckovwiki.fun</code>.
+                            {t.contact_desc}
                         </p>
                     </div>
                 </article>

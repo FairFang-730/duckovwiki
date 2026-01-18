@@ -90,7 +90,6 @@
         }
     },
     "About": {
-        "eyebrow": "/// CURRENT VERSION: V1.3.12 ///",
         "title": "About Us",
         "intro": "DuckovWiki is the premier unofficial field manual for \"Escape From Duckov\", the top-down PVE extraction shooter developed by Team Soda. Unlike standard shooters, this project documents the unique fusion of tactical survival and Roguelite progression. We exist to aid the \"Average Duck\" in navigating hostile zones like The Slums and Chemical Plant, providing verified intel on hydration management, sanity control, and safe extraction points.",
         "value1_title": "Confirmed Intel",
@@ -102,16 +101,14 @@
         "server_tag": "SERVER_STATUS:"
     },
     "Contact": {
-        "eyebrow": "/// CURRENT VERSION: V1.3.12 ///",
         "title": "Contact Us",
-        "intro": "We need to hear your callsign.",
         "desc": "We value your feedback and are dedicated to providing the best experience for the community. Whether you've found a data error, have a feature suggestion, or just want to say hello, we are ready to listen. Please note that we are a fan site and cannot assist with game account issues (bans, refunds, etc.). For such issues, please contact Team Soda directly.",
         "card_desc": "For all support requests, business inquiries, and DMCA copyright reports, please contact us directly via email. We aim to respond to all legitimate inquiries within 48 hours.",
         "email_label": "Email Address"
     },
     "Terms": {
         "title": "Terms of Service",
-        "date_tag": "EFFECTIVE_DATE: 2026-01-18",
+        "date_tag": "LAST_UPDATED: 2026-01-18",
         "h1": "1. Acceptance of Terms",
         "p1": "By accessing or using DuckovWiki (\"the Site\"), you agree to be bound by these Terms of Service. This Site is an unofficial fan resource and is not affiliated with, endorsed by, or connected to Team Soda. If you do not agree to these terms, please do not use the Site.",
         "h2": "2. Intellectual Property Rights",
@@ -161,7 +158,7 @@
     },
     "Privacy": {
         "title": "Privacy Policy",
-        "date_tag": "LAST_REVISION: 2026-01-18",
+        "date_tag": "LAST_UPDATED: 2026-01-18",
         "h1": "1. Introduction",
         "p1": "DuckovWiki (\"us\", \"we\", or \"our\") operates the https://duckovwiki.fun website (the \"Service\"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. By using the Service, you agree to the collection and use of information in accordance with this policy.",
         "h2": "2. Information Collection and Use",

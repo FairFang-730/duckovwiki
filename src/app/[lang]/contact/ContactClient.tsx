@@ -21,11 +21,7 @@ export default function ContactClient({ lang, dict }: { lang: Locale, dict: Dict
             <div className="max-w-6xl mx-auto">
                 <div className="prose prose-invert prose md:prose-lg prose-yellow max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:text-neutral-300 [&_p]:text-neutral-300 prose-p:leading-8 prose-li:text-neutral-300 [&_li]:text-neutral-300 prose-strong:text-white">
                     <header className="mb-8 border-b border-neutral-800 pb-8">
-                        <div className="text-yellow-500 font-mono text-sm mb-2 uppercase tracking-widest">{t.eyebrow}</div>
                         <h1 className="text-4xl font-bold text-white mb-4">{t.title}</h1>
-                        <p className="lead text-xl text-neutral-400">
-                            {t.intro}
-                        </p>
                     </header>
 
                     <p>
