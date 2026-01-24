@@ -34,7 +34,7 @@ export default function Navbar({ dict, lang }: { dict: Dictionary, lang: string 
 
                         {/* Patch Label (Desktop Only) */}
                         <span className="hidden md:inline-flex bg-green-900/30 text-green-400 text-xs font-mono px-2 py-1 rounded border border-green-800/50">
-                            {siteConfig.gameVersion}
+                            Patch {siteConfig.gameVersion}
                         </span>
                     </div>
 
@@ -136,7 +136,7 @@ export default function Navbar({ dict, lang }: { dict: Dictionary, lang: string 
                     </div>
                     {/* Mobile Patch Label */}
                     <div className="px-5 py-3 border-t border-neutral-800">
-                        <span className="text-neutral-500 text-xs font-mono">Current: {siteConfig.gameVersion}</span>
+                        <span className="text-neutral-500 text-xs font-mono">Current: Patch {siteConfig.gameVersion}</span>
                     </div>
                 </div>
             )}

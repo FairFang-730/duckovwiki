@@ -26,7 +26,7 @@
     "Home": {
         "Hero": {
             "h1": "The Unofficial\nEscape From Duckov Wiki",
-            "h2": "Master the PVE world. Interactive Maps, Hideout Building, and Weapon Mods. Updated for Patch v1.3.12.",
+            "h2": "Master the PVE world. Interactive Maps, Hideout Building, and Weapon Mods. Updated for Patch {{VERSION}}.",
             "search_placeholder": "Warehouse Loot Route, Big Boy Boss, Circuit Board...",
             "cta_primary": "START SCAVENGING",
             "cta_secondary": "VIEW BLUEPRINTS",
@@ -34,7 +34,7 @@
         },
         "TrustBar": {
             "patch_label": "CURRENT PATCH:",
-            "patch_val": "v1.3.12",
+            "patch_val": "{{VERSION}}",
             "status": "SERVER STATUS:",
             "status_val": "PVE ONLINE",
             "wipe_label": "DATABASE:",
@@ -56,7 +56,7 @@
             "tip_content": "The \"Scrap\" Economy: Unlike other shooters, don't ignore junk items. Use the Workbench in your Bunker to dismantle scrap into raw materials. This is the only way to craft high-tier ammo and upgrades without spending cash.",
             "tip_author": "— Duck \"Scav_King\"",
             "meta_badge": "TOPS",
-            "meta_title": "Current Weapon Meta (v1.3.12):",
+            "meta_title": "Current Weapon Meta ({{VERSION}}):",
             "meta_list": [
                 "Aim Assist Module: Best for clearing \"Ground Zero\" quickly.",
                 "Mosin Bipod: Essential for boss fights (Big Boy).",
@@ -74,7 +74,7 @@
             "q1": "Is Escape From Duckov multiplayer or PVP?",
             "a1": "No. Escape From Duckov is strictly a single-player PVE extraction shooter. You fight against AI enemies (Hostile Ducks), not real players. While unofficial co-op mods exist on the Steam Workshop, the core game is designed for solo progression.",
             "q2": "Does the game have native controller support?",
-            "a2": "Not officially. As of Patch v1.3.12, Escape From Duckov does not have native controller support. However, it is rated \"Playable\" on Steam Deck by using community layouts (Steam Input) to map WASD controls to joysticks.",
+            "a2": "Not officially. As of Patch {{VERSION}}, Escape From Duckov does not have native controller support. However, it is rated \"Playable\" on Steam Deck by using community layouts (Steam Input) to map WASD controls to joysticks.",
             "q3": "Where is the save file location?",
             "a3": "Your save data is located at: %AppData%\\LocalLow\\TeamSoda\\Duckov\\Saves. Tip: The game has a built-in \"Restore Backup\" feature in the main menu if your save gets corrupted.",
             "q4": "What happens when I die?",
@@ -83,10 +83,10 @@
             "a5": "This is a known issue with older GPU drivers. Please update your drivers or verify the integrity of game files via Steam. If the issue persists, try disabling \"Rim Light\" in the graphics settings."
         },
         "MissionBriefing": {
-            "header": "SYSTEM_LOG // ESCAPE_FROM_DUCKOV_INTELLIGENCE_DATABASE_V1.3.12",
+            "header": "SYSTEM_LOG // ESCAPE_FROM_DUCKOV_INTELLIGENCE_DATABASE_{{VERSION}}",
             "p1": "// TARGET DESIGNATION: ESCAPE FROM DUCKOV This database is dedicated to Escape From Duckov, the top-down PVE extraction shooter developed by Team Soda. Unlike traditional FPS titles, this indie gem combines tactical survival mechanics with Roguelite progression. Players assume the role of an Average Duck, tasked with scavenging dynamic maps like Ground Zero, The Slums, and Chemical Plant. The operational loop involves managing hydration, sanity, and inventory space while evading hostile AI ducks to secure a safe extraction.",
             "p2": "// TACTICAL_ASSETS & UTILITY DuckovWiki is the premier Unofficial Field Manual designed to reduce the learning curve. Our archive includes: 1. Interactive Maps: Pinpointing all hidden Stashes, Blueprints, and Extraction Points. 2. Armory Data: Detailed stats for 50+ weapons, including Ammo Damage Charts and Recoil Control builds. 3. Hideout Planner: A complete calculator for Workbench upgrades, tracking required materials like Scrap Metal, Circuit Boards, and Duct Tape. 4. Quest Log: Step-by-step walkthroughs for NPC missions from Jeff the Duck, including key locations and item requirements.",
-            "p3": "// OPERATIONAL_STATUS Whether you are optimizing your Steam Deck layout or looking for the best Solo Farming Routes, this site is updated daily. All intel is verified for Steam Early Access (Patch v1.3.12). We strictly support legitimate single-player progression and do not condone cheats.",
+            "p3": "// OPERATIONAL_STATUS Whether you are optimizing your Steam Deck layout or looking for the best Solo Farming Routes, this site is updated daily. All intel is verified for Steam Early Access (Patch {{VERSION}}). We strictly support legitimate single-player progression and do not condone cheats.",
             "footer": "END_OF_LOG // PROCEED_TO_EXTRACTION"
         }
     },
@@ -94,11 +94,11 @@
         "title": "About Us",
         "intro": "DuckovWiki is the premier unofficial field manual for \"Escape From Duckov\", the top-down PVE extraction shooter developed by Team Soda. Unlike standard shooters, this project documents the unique fusion of tactical survival and Roguelite progression. We exist to aid the \"Average Duck\" in navigating hostile zones like The Slums and Chemical Plant, providing verified intel on hydration management, sanity control, and safe extraction points.",
         "value1_title": "Confirmed Intel",
-        "value1_desc": "From hidden Stashes to Blueprints, every data point is verified for Patch v1.3.12. If it is in the database, it exists in the field.",
+        "value1_desc": "From hidden Stashes to Blueprints, every data point is verified for Patch {{VERSION}}. If it is in the database, it exists in the field.",
         "value2_title": "Community Support",
         "value2_desc": "We strictly support legitimate single-player progression and provide the data needed to master the loop.",
         "status_desc": "Designated as a comprehensive tactical archive, DuckovWiki reduces the learning curve for new operators. Our interactive archives cover everything from Weapon Recoil Charts and Ammo Damage to detailed Quest Logs for NPCs like Jeff the Duck. Whether you are optimizing your Steam Deck layout or calculating resource costs for Workbench upgrades (Scrap Metal, Duct Tape), our data is updated daily to reflect the latest Steam game version. We are an independent fan site supporting the game's ecosystem.",
-        "version_tag": "CURRENT_VERSION: v1.3.12",
+        "version_tag": "CURRENT_VERSION: {{VERSION}}",
         "server_tag": "SERVER_STATUS:"
     },
     "Contact": {
@@ -117,7 +117,7 @@
         "h3": "3. User Conduct",
         "p3": "You agree to use the Site only for lawful purposes. You are granted a limited, non-exclusive, non-transferable license to access and display the content for personal, non-commercial use. You agree not to disrupt or attempt to disrupt the operation of the Site in any way.",
         "h4": "4. Accuracy of Information",
-        "p4": "While we strive to keep all information consistent with the latest patch (v1.3.12), we cannot guarantee the absolute accuracy of all data. Game mechanics are subject to change by the developers at any time. We are not responsible for any inaccuracies or errors.",
+        "p4": "While we strive to keep all information consistent with the latest patch ({{VERSION}}), we cannot guarantee the absolute accuracy of all data. Game mechanics are subject to change by the developers at any time. We are not responsible for any inaccuracies or errors.",
         "h5": "5. User Submitted Content",
         "p5": "Portions of this Site may allow users to post and exchange opinions and information. By submitting content, you represent that you own the rights or license to it. You grant DuckovWiki a non-exclusive license to display this content. We reserve the right to remove any content that violates copyright or community standards.",
         "h6": "6. Limitation of Liability",
